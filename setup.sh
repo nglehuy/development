@@ -28,8 +28,8 @@ npm config set prefix '~/.npm-global'
 
 echo "Setting up pyenv"
 eval "$(pyenv init -)"
-pyenv install 3.7.8
-pyenv install 2.7.17
+pyenv install -s 3.7.8
+pyenv install -s 2.7.17
 pyenv shell 2.7.17 && pip install -U pip neovim flake8 autopep8 pep8 python-language-server
 pyenv shell 3.7.8 && pip install -U pip neovim flake8 autopep8 pep8 python-language-server
 pyenv global 3.7.8
@@ -46,5 +46,6 @@ export ZSH="$HOME/.zsh/oh-my-zsh"
 echo "Setting up configurations ..."
 cp -l -f -T -r $PWD/home $HOME
 cp -l -f -T -r $PWD/config $HOME/.config
+vim -E -s -u "$HOME/.vimrc" +PlugInstall +qall
 
 echo "Done installation."
