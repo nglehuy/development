@@ -21,9 +21,6 @@ Plug 'Yggdroot/indentLine'
 " Rainbow
 Plug 'luochen1990/rainbow'
 
-" Clang Format
-Plug 'rhysd/vim-clang-format'
-
 " Vim auto closed tag
 Plug 'alvan/vim-closetag'
 
@@ -44,9 +41,6 @@ Plug 'rhysd/vim-operator-surround'
 
 " MARKDOWN PREVIEW FOR (NEO)VIM
 Plug 'iamcco/markdown-preview.nvim'
-
-" Prettier formatter for javascript
-Plug 'prettier/vim-prettier'
 
 " Csv file
 Plug 'chrisbra/csv.vim'
@@ -205,10 +199,10 @@ let g:rainbow_active = 1
 " Prettier
 " single quotes over double quotes
 " Prettier default: false
-let g:prettier#config#single_quote = 'false'
-let g:prettier#config#bracket_spacing = 'true'
-let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+" let g:prettier#config#single_quote = 'false'
+" let g:prettier#config#bracket_spacing = 'true'
+" let g:prettier#autoformat = 0
+" autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
 "auto closed tag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.jsx'

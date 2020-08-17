@@ -179,8 +179,8 @@ unsetopt PROMPT_SP
 export JAVA_HOME=/usr/lib/jvm/default
 
 # pyenv
-# export PATH="$HOME/.pyenv/bin:$PATH"
-# eval "$(pyenv init -)"
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
