@@ -112,7 +112,7 @@ SPACESHIP_PROMPT_ADD_NEWLINE=false
 # SPACESHIP_CHAR_SYMBOL="  "
 # SPACESHIP_CHAR_SYMBOL="  "
 # SPACESHIP_CHAR_SYMBOL="  "
-SPACESHIP_CHAR_SYMBOL=">>"
+SPACESHIP_CHAR_SYMBOL="~>"
 SPACESHIP_USER_SHOW="always"
 SPACESHIP_TIME_SHOW="true"
 SPACESHIP_DIR_TRUNC=0
@@ -163,7 +163,7 @@ alias cp='cp -vR'
 alias mv='mv -v'
 alias rm='rm -vR'
 alias homeserver='ssh nlhuy@27.64.55.118'
-alias nvide="nohup env DRI_PRIME=1 neovide > /dev/null 2>&1 & disown"
+alias nvide="nohup env DRI_PRIME=1 neovide --geometry=150x100 > /dev/null 2>&1 & disown"
 
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.

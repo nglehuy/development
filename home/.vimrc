@@ -73,9 +73,11 @@ filetype plugin indent on    " required
 let g:onedark_terminal_italics = 1
 
 " start nvim/vim config
-let g:neovide_cursor_vfx_mode = "sonicboom"
+let g:neovide_cursor_vfx_mode = "railgun"
 let g:neovide_no_idle=v:true
 let g:neovide_cursor_trail_length=1
+let g:neovide_cursor_animation_length=0.2
+let g:neovide_cursor_antialiasing=v:true
 " set relativenumber
 set number
 set showmatch
@@ -94,7 +96,7 @@ let g:airline#extensions#ale#enabled = 1
 let g:airline_powerline_fonts = 1
 " end nvim/vim config
 
-set guifont=CaskaydiaCove\ Nerd\ Font\ Mono:h16:b
+set guifont=FiraCode\ Nerd\ Font:h16
 "start theme config
 set termguicolors
 let base16colorspace=256  " Access colors present in 256 colorspace
