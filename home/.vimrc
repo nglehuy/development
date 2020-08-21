@@ -99,12 +99,12 @@ map <silent>sa <Plug>(operator-surround-append)
 map <silent>sd <Plug>(operator-surround-delete)
 map <silent>sr <Plug>(operator-surround-replace)
 
-source '~/.config/nvim/neovide.vim'
+source $HOME/.config/nvim/neovide.vim
 
-source '~/.config/nvim/theme.vim'
+source $HOME/.config/nvim/theme.vim
 
-source '~/.config/nvim/vaffle.vim'
+source $HOME/.config/nvim/vaffle.vim
 
-source '~/.config/nvim/coc.vim'
+source $HOME/.config/nvim/coc.vim
 
-source '~/.config/nvim/denite.vim'
+source $HOME/.config/nvim/denite.vim
