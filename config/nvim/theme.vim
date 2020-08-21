@@ -5,7 +5,7 @@ let base16colorspace=256  " Access colors present in 256 colorspace
 colorscheme onedark
 let ayucolor="dark"
 " colorscheme ayu
-let g:airline_theme='ayu_dark'
+let g:airline_theme='onedark'
 let g:gruvbox_contrast_dark='hard'
 " onedark
 let g:onedark_terminal_italics = 1
