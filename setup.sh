@@ -46,6 +46,6 @@ export ZSH="$HOME/.zsh/oh-my-zsh"
 echo "Setting up configurations ..."
 cp -l -f -T -r $PWD/home $HOME
 cp -l -f -T -r $PWD/config $HOME/.config
-nvim -E -s -u "$HOME/.vimrc" +PlugInstall +qall
+nvim -E -s -u "$HOME/.config/nvim/init.vim" +PlugInstall +qa
 
 echo "Done installation."
