@@ -56,11 +56,9 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tomtom/tcomment_vim'
 
 " Themes
-Plug 'morhetz/gruvbox'
+Plug 'arcticicestudio/nord-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'joshdick/onedark.vim'
-Plug 'ayu-theme/ayu-vim'
 
 Plug 'tranvansang/octave.vim'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
