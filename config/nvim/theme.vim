@@ -1,4 +1,4 @@
-set guifont=FiraCode\ Nerd\ Font:h16
+set guifont=FiraCode\ Nerd\ Font:h14
 set termguicolors
 let base16colorspace=256  " Access colors present in 256 colorspace
 " colorscheme gruvbox
