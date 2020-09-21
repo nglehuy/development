@@ -1,17 +1,5 @@
 #!/usr/bin/env sh
 
-echo "Installing development tools ..."
-sudo pacman -Syu --noconfirm --needed gcc clang go ruby git make cmake openssh wget curl fzf \
-    p7zip unrar unzip zip unarchiver bzip2 gzip lrzip lz4 lzip lzop xz tar \
-    base-devel openssl zlib readline sqlite llvm ncurses xz tk python-pyopenssl libffi \
-    python python-pip pyenv \
-    vim neovim zsh \
-    nodejs yarn npm \
-    jdk-openjdk jre-openjdk maven \
-    ffmpeg \
-    boost swig sox \
-    neofetch htop xdotool xclip ctags
-
 go get github.com/mattn/efm-langserver
 
 echo "Installing vim-plug ..."
@@ -25,14 +13,6 @@ gem install neovim solargraph
 echo "Setting up npm ..."
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
-
-echo "Setting up pyenv"
-eval "$(pyenv init -)"
-pyenv install -s 3.7.8
-pyenv install -s 2.7.17
-pyenv shell 2.7.17 && pip install -U pip neovim flake8 autopep8 pep8 python-language-server
-pyenv shell 3.7.8 && pip install -U pip neovim flake8 autopep8 pep8 python-language-server
-pyenv global 3.7.8
 
 echo "Setting up zsh ..."
 # Oh my zsh

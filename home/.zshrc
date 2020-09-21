@@ -168,7 +168,7 @@ alias nvide="nohup env DRI_PRIME=1 neovide --geometry=260x150 > /dev/null 2>&1 &
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
 # ( ) # Hide shell job control messages.
-# (cat ~/.cache/wal/sequences &)
+(cat ~/.cache/wal/sequences &)
 
 # BLUR BACKGROUND
 
@@ -179,8 +179,8 @@ unsetopt PROMPT_SP
 export JAVA_HOME=/usr/lib/jvm/default
 
 # pyenv
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
+# export PATH="$HOME/.pyenv/bin:$PATH"
+# eval "$(pyenv init -)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
@@ -218,3 +218,18 @@ fi
 
 # Golang
 export PATH="$PATH:$HOME/go/bin"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/nlhuy/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/nlhuy/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/nlhuy/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/nlhuy/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
