@@ -8,5 +8,6 @@
 </h1>
 
 <p align="center">
-This repository contains my personal configurations for development using archlinux, vim and neovim :yum:
+This repository contains my personal configurations for development using linux, vim and neovim :yum:
 </p>
+
