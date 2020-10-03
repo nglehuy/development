@@ -18,7 +18,7 @@
   "python.linting.pylintEnabled": false,
   "python.linting.pep8Enabled": true,
   "python.jediEnabled": true,
-  "python.pythonPath": "~/.pyenv/versions/3.7.8/bin/python",
+  "python.pythonPath": "~/anaconda3/envs/tf/bin/python",
   "languageserver": {
     "dockerfile": {
       "command": "docker-langserver",

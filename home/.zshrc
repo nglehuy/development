@@ -162,8 +162,11 @@ SPACESHIP_RPROMPT_ORDER=(
 alias cp='cp -vR'
 alias mv='mv -v'
 alias rm='rm -vR'
-alias homeserver='ssh nlhuy@27.64.55.118'
 alias nvide="nohup env DRI_PRIME=1 neovide --geometry=260x150 > /dev/null 2>&1 & disown"
+alias gtree="git log --graph --decorate --oneline"
+
+# variables
+export HOMESERVER="nlhuy@27.74.114.227"
 
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
