@@ -1,8 +1,6 @@
 #!/usr/bin/env sh
 
-sudo snap install go --classic
-
-sudo snap install node --channel=15/stable --classic
+curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash -
 
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
@@ -15,7 +13,7 @@ sudo apt install -y gcc g++ clang ruby git make cmake openssh-client wget curl f
     default-jdk default-jre maven \
     ffmpeg libboost-all-dev swig sox \
     neofetch htop xdotool xclip ctags \
-    yarn
+    nodejs yarn 
 
 sudo groupadd docker
 sudo usermod -aG docker $USER
