@@ -15,7 +15,7 @@ sudo apt install -y gcc g++ clang ruby git make cmake openssh-client wget curl f
     default-jdk default-jre maven \
     ffmpeg libboost-all-dev swig sox \
     neofetch htop xdotool xclip ctags \
-    yarn docker docker-compose
+    yarn
 
 sudo groupadd docker
 sudo usermod -aG docker $USER
