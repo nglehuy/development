@@ -171,7 +171,7 @@ export HOMESERVER="nlhuy@27.74.114.227"
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
 # ( ) # Hide shell job control messages.
-(cat ~/.cache/wal/sequences &)
+# (cat ~/.cache/wal/sequences &)
 
 # BLUR BACKGROUND
 
@@ -220,7 +220,7 @@ if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
 fi
 
 # Golang
-export PATH="$PATH:$HOME/go/bin"
+export PATH="$PATH:/usr/local/go/bin"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
