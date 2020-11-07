@@ -112,7 +112,7 @@ SPACESHIP_PROMPT_ADD_NEWLINE=false
 # SPACESHIP_CHAR_SYMBOL="  "
 # SPACESHIP_CHAR_SYMBOL="  "
 # SPACESHIP_CHAR_SYMBOL="  "
-SPACESHIP_CHAR_SYMBOL="#"
+SPACESHIP_CHAR_SYMBOL="❯"
 SPACESHIP_USER_SHOW="always"
 SPACESHIP_TIME_SHOW="true"
 SPACESHIP_DIR_TRUNC=0
@@ -163,7 +163,7 @@ alias cp='cp -vR'
 alias mv='mv -v'
 alias rm='rm -vR'
 alias nvide="nohup env DRI_PRIME=1 neovide --geometry=260x150 > /dev/null 2>&1 & disown"
-alias gtree="git log --graph --decorate --oneline --all"
+alias gtree="git log --graph --decorate --oneline --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
 
 # variables
 export HOMESERVER="nlhuy@27.74.114.227"
