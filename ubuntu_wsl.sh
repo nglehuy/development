@@ -3,7 +3,7 @@
 wget https://golang.org/dl/go1.15.4.linux-amd64.tar.gz
 tar -C /usr/local -xzf go1.15.4.linux-amd64.tar.gz
 
-curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
