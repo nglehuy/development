@@ -4,7 +4,7 @@
 MOUNT_ROOT=/mnt/
 
 # Read GitKraken's hook script and arguments from STDIN
-read -r GITKRAKEN_CMD
+GITKRAKEN_CMD="$*"
 
 # Cleanup the path to the script:
 # - Replace two or more '\' in a row with a single '/'.
