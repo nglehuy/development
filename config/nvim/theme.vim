@@ -1,7 +1,7 @@
 set guifont=FiraCode\ Nerd\ Font:h14
 set termguicolors
-colorscheme nord
-let g:airline_theme='nord'
+colorscheme molokai
+let g:airline_theme='bubblegum'
 " set relativenumber
 set number
 set showmatch
