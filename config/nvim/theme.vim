@@ -9,7 +9,7 @@ set showmatch
 set showcmd
 set noshowmode
 set cmdheight=1
-set cursorline
+" set cursorline
 set background=dark
 
 highlight clear CursorLine " Removes the underline causes by enabling cursorline
