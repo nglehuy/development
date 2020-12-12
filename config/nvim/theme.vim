@@ -4,6 +4,7 @@ colorscheme molokai
 let g:airline_theme='bubblegum'
 " set relativenumber
 set number
+set relativenumber
 set showmatch
 set showcmd
 set noshowmode
@@ -55,7 +56,7 @@ let g:comfortable_motion_scroll_down_key = "j"
 let g:comfortable_motion_scroll_up_key = "k"
 
 " Background
-"hi Normal guibg=NONE ctermbg=NONE
+hi Normal guibg=NONE ctermbg=NONE
 hi LineNr guibg=NONE ctermbg=NONE
 
 " Rainbow
