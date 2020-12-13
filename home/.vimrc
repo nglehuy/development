@@ -1,4 +1,5 @@
 set nocompatible              " be iMproved, required
+set autoread
 filetype off                  " required
 
 call plug#begin('~/.vim/plugged')
