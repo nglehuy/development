@@ -3,6 +3,10 @@ set autoread
 filetype off                  " required
 
 call plug#begin('~/.vim/plugged')
+" Nerdtree
+Plug 'preservim/nerdtree' |
+    \ Plug 'Xuyuanp/nerdtree-git-plugin'
+
 " Syntax
 Plug 'vim-python/python-syntax'
 
@@ -18,9 +22,6 @@ Plug 'airblade/vim-gitgutter'
 
 " For indentation
 Plug 'Yggdroot/indentLine'
-
-" Rainbow
-Plug 'luochen1990/rainbow'
 
 " Vim auto closed tag
 Plug 'alvan/vim-closetag'
@@ -103,7 +104,8 @@ source $HOME/.config/nvim/neovide.vim
 
 source $HOME/.config/nvim/theme.vim
 
-source $HOME/.config/nvim/vaffle.vim
+" source $HOME/.config/nvim/vaffle.vim
+source $HOME/.config/nvim/nerdtree.vim
 
 source $HOME/.config/nvim/coc.vim
 

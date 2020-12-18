@@ -59,9 +59,6 @@ let g:comfortable_motion_scroll_up_key = "k"
 hi Normal guibg=NONE ctermbg=NONE
 hi LineNr guibg=NONE ctermbg=NONE
 
-" Rainbow
-let g:rainbow_active = 1
-
 "auto closed tag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.jsx'
 
