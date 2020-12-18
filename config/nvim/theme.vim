@@ -1,6 +1,6 @@
 set guifont=FiraCode\ Nerd\ Font:h14
 set termguicolors
-colorscheme molokai
+colorscheme sonokai
 let g:airline_theme='bubblegum'
 " set relativenumber
 set number

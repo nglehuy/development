@@ -4,7 +4,6 @@ let g:coc_global_extensions = [
             \'coc-python',
             \'coc-cmake',
             \'coc-css',
-            \'coc-prettier',
             \'coc-eslint',
             \'coc-flutter',
             \'coc-solargraph',
