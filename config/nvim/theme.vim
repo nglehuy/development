@@ -1,7 +1,10 @@
 set guifont=FiraCode\ Nerd\ Font:h14
 set termguicolors
+let g:sonokai_style = 'shusia'
+let g:sonokai_enable_italic = 1
+let g:sonokai_disable_italic_comment = 1
 colorscheme sonokai
-let g:airline_theme='bubblegum'
+let g:airline_theme='sonokai'
 " set relativenumber
 set number
 set relativenumber
@@ -9,7 +12,7 @@ set showmatch
 set showcmd
 set noshowmode
 set cmdheight=1
-" set cursorline
+set cursorline
 set background=dark
 
 highlight clear CursorLine " Removes the underline causes by enabling cursorline
@@ -56,7 +59,7 @@ let g:comfortable_motion_scroll_down_key = "j"
 let g:comfortable_motion_scroll_up_key = "k"
 
 " Background
-hi Normal guibg=NONE ctermbg=NONE
+" hi Normal guibg=NONE ctermbg=NONE
 hi LineNr guibg=NONE ctermbg=NONE
 
 "auto closed tag
