@@ -7,9 +7,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'preservim/nerdtree' |
     \ Plug 'Xuyuanp/nerdtree-git-plugin'
 
-" Syntax
-Plug 'vim-python/python-syntax'
-
 " Brings physics-based smooth scrolling to the Vim/Neovim world!
 Plug 'yuttie/comfortable-motion.vim'
 
@@ -66,6 +63,8 @@ Plug 'sainnhe/sonokai'
 Plug 'tranvansang/octave.vim'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+
 " All of your Plugins must be added before the following line
 call plug#end()
 
@@ -110,3 +109,5 @@ source $HOME/.config/nvim/nerdtree.vim
 source $HOME/.config/nvim/coc.vim
 
 source $HOME/.config/nvim/denite.vim
+
+source $HOME/.config/nvim/treesitter.vim

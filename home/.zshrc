@@ -220,7 +220,7 @@ if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
 fi
 
 # Golang
-export PATH="$PATH:/usr/local/go/bin"
+export PATH="$PATH:/usr/local/go/bin:$HOME/go/bin"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

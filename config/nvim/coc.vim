@@ -5,6 +5,7 @@ let g:coc_global_extensions = [
             \'coc-cmake',
             \'coc-css',
             \'coc-eslint',
+            \'coc-prettier',
             \'coc-flutter',
             \'coc-solargraph',
             \'coc-fzf-preview',

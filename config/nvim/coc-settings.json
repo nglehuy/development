@@ -19,7 +19,7 @@
   "python.linting.pylintEnabled": false,
   "python.linting.pep8Enabled": true,
   "python.jediEnabled": true,
-  "python.pythonPath": "~/anaconda3/envs/tf/bin/python",
+  "python.pythonPath": "~/anaconda3/bin/python",
   "languageserver": {
     "dockerfile": {
       "command": "docker-langserver",
@@ -48,5 +48,8 @@
   "clangd.enable": true,
   "clangd.semanticHighlighting": true,
   "css.lint.duplicateProperties": "warning",
-  "scss.lint.duplicateProperties": "warning"
+  "scss.lint.duplicateProperties": "warning",
+  "prettier.singleQuote": true,
+  "prettier.eslintIntegration": true,
+  "prettier.tslintIntegration": false
 }
