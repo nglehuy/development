@@ -32,7 +32,7 @@ module.exports = {
     fontFamily: '"CaskaydiaCove Nerd Font Mono", "DejaVuSansMono Nerd Font Mono", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // default font weight: 'normal' or 'bold'
-    fontWeight: 'bold',
+    fontWeight: 'normal',
 
     // font weight for bold characters: 'normal' or 'bold'
     fontWeightBold: 'bold',

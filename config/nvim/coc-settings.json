@@ -45,7 +45,6 @@
   },
   "json.enable": true,
   "json.format.enable": true,
-  "clangd.enable": true,
   "clangd.semanticHighlighting": true,
   "css.lint.duplicateProperties": "warning",
   "scss.lint.duplicateProperties": "warning",

@@ -35,12 +35,12 @@ set expandtab
 set laststatus=2
 set splitright
 set splitbelow
-set textwidth=96
 set fileformat=unix
 set encoding=utf-8
 
 " for javascript
 autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType typescript setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 set listchars=tab:\|\ 
 set list
@@ -70,6 +70,3 @@ au BufNewFile,BufRead /*.rasi setf css
 
 " wrap line
 set nowrap
-
-" Switch to opened buffer position, including tab
-set switchbuf=usetab

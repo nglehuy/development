@@ -1,5 +1,6 @@
 set nocompatible              " be iMproved, required
 set autoread
+set hidden
 filetype off                  " required
 
 call plug#begin('~/.vim/plugged')
@@ -98,6 +99,8 @@ set shell=/usr/bin/zsh
 map <silent>sa <Plug>(operator-surround-append)
 map <silent>sd <Plug>(operator-surround-delete)
 map <silent>sr <Plug>(operator-surround-replace)
+
+set switchbuf=useopen,usetab
 
 source $HOME/.config/nvim/neovide.vim
 
