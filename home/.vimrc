@@ -4,6 +4,9 @@ set hidden
 filetype off                  " required
 
 call plug#begin('~/.vim/plugged')
+
+Plug 'sheerun/vim-polyglot'
+
 " Nerdtree
 Plug 'preservim/nerdtree' |
     \ Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -32,8 +35,8 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
 " COC 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'jackguo380/vim-lsp-cxx-highlight'
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+Plug 'vim-python/python-syntax'
 
 " OPERATOR TO SURROUND A TEXT OBJECT
 Plug 'kana/vim-operator-user'
@@ -56,7 +59,6 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tomtom/tcomment_vim'
 
 " Themes
-Plug 'arcticicestudio/nord-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'sainnhe/sonokai'
@@ -64,12 +66,15 @@ Plug 'sainnhe/sonokai'
 Plug 'tranvansang/octave.vim'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+
+Plug 'puremourning/vimspector'
 
 " All of your Plugins must be added before the following line
 call plug#end()
 
 filetype plugin indent on    " required
+syntax on
 
 " mapping
 nnoremap <C-J> <C-W><C-J>
@@ -102,15 +107,17 @@ map <silent>sr <Plug>(operator-surround-replace)
 
 set switchbuf=useopen,usetab
 
-source $HOME/.config/nvim/neovide.vim
+let g:typescript_indent_disable = 1
+
+" source $HOME/.config/nvim/neovide.vim
 
 source $HOME/.config/nvim/theme.vim
 
 " source $HOME/.config/nvim/vaffle.vim
 source $HOME/.config/nvim/nerdtree.vim
 
-source $HOME/.config/nvim/coc.vim
+" source $HOME/.config/nvim/coc.vim
 
 source $HOME/.config/nvim/denite.vim
 
-source $HOME/.config/nvim/treesitter.vim
+" source $HOME/.config/nvim/treesitter.vim

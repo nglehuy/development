@@ -237,3 +237,4 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 fpath=($fpath "/home/nlhuy/.zfunctions")
+fpath=($fpath "/home/nlhuy/.zfunctions")

@@ -17,8 +17,6 @@ set background=dark
 
 highlight clear CursorLine " Removes the underline causes by enabling cursorline
 
-syntax on
-
 let g:python_highlight_all = 1
 
 let g:airline#extensions#tabline#enabled = 1
@@ -39,6 +37,7 @@ set fileformat=unix
 set encoding=utf-8
 
 " for javascript
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType typescript setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
@@ -60,13 +59,16 @@ let g:comfortable_motion_scroll_up_key = "k"
 
 " Background
 " hi Normal guibg=NONE ctermbg=NONE
-hi LineNr guibg=NONE ctermbg=NONE
+" hi LineNr guibg=NONE ctermbg=NONE
 
 "auto closed tag
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.jsx'
+let g:closetag_filetypes = 'html,xhtml,phtml,js,jsx,ts,tsx'
 
 " rofi
 au BufNewFile,BufRead /*.rasi setf css
 
 " wrap line
 set nowrap
+
+autocmd BufEnter * :syntax sync fromstart
+autocmd BufLeave * :syntax sync clear

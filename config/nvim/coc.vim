@@ -1,11 +1,12 @@
 let g:coc_global_extensions = [
+            \'coc-tsserver',
+            \'coc-eslint',
+            \'coc-prettier',
             \'coc-json',
             \'coc-clangd',
             \'coc-python',
             \'coc-cmake',
             \'coc-css',
-            \'coc-eslint',
-            \'coc-prettier',
             \'coc-flutter',
             \'coc-solargraph',
             \'coc-fzf-preview',
@@ -36,9 +37,9 @@ nmap <silent> gr <Plug>(coc-references)
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 " Format
-vmap <leader>f  <Plug>(coc-format)
-nmap <leader>f  <Plug>(coc-format)
+vmap <leader>f <Plug>(coc-format)
+nmap <leader>f <Plug>(coc-format)
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
-let g:lsp_cxx_hl_use_text_props = 1
+" let g:lsp_cxx_hl_use_text_props = 1

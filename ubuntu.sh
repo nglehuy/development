@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 sudo snap install go --classic
 
