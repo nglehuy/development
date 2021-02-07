@@ -112,7 +112,7 @@ SPACESHIP_PROMPT_ADD_NEWLINE=false
 # SPACESHIP_CHAR_SYMBOL="  "
 # SPACESHIP_CHAR_SYMBOL="  "
 # SPACESHIP_CHAR_SYMBOL="  "
-SPACESHIP_CHAR_SYMBOL="❯"
+SPACESHIP_CHAR_SYMBOL="$"
 SPACESHIP_USER_SHOW="always"
 SPACESHIP_TIME_SHOW="true"
 SPACESHIP_DIR_TRUNC=0
@@ -165,9 +165,6 @@ alias rm='rm -vR'
 alias nvide="nohup env DRI_PRIME=1 neovide --geometry=260x150 > /dev/null 2>&1 & disown"
 alias gtree="git log --graph --decorate --oneline --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
 
-# variables
-export HOMESERVER="nlhuy@27.74.114.227"
-
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
 # ( ) # Hide shell job control messages.
@@ -194,6 +191,9 @@ export PATH="$PATH:$(yarn global bin)"
 
 # Ruby
 export PATH="$PATH:$(gem env gempath)"
+
+# NVM
+source /usr/share/nvm/init-nvm.sh
 
 # Set Spaceship ZSH as a prompt
 fpath=($fpath "$HOME/.zfunctions")
@@ -236,5 +236,4 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-fpath=($fpath "/home/nlhuy/.zfunctions")
 fpath=($fpath "/home/nlhuy/.zfunctions")

@@ -6,13 +6,8 @@ echo "Installing vim-plug ..."
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 mkdir ~/.swap-files
 
-echo "Setting up yarn ..."
-yarn global add spaceship-prompt neovim bash-language-server dockerfile-language-server-nodejs eslint eslint-plugin-vue vls sql-language-server
+npm install -g spaceship-prompt neovim bash-language-server dockerfile-language-server-nodejs eslint eslint-plugin-vue vls sql-language-server
 gem install neovim solargraph
-
-echo "Setting up npm ..."
-mkdir ~/.npm-global
-npm config set prefix '~/.npm-global'
 
 echo "Setting up zsh ..."
 # Oh my zsh
