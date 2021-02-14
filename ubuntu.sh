@@ -2,10 +2,6 @@
 
 sudo snap install go --classic
 
-sudo snap install node --classic
-
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 sudo apt update
 
 sudo apt install -y gcc g++ clang ruby git make cmake openssh-client wget curl openvpn \
