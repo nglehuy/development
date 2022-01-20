@@ -1,7 +1,8 @@
+let g:vscode_style = "dark"
 syntax on
 set termguicolors
-colorscheme OceanicNext
-let g:airline_theme='oceanicnext'
+colorscheme vscode
+let g:airline_theme='vscode'
 set number
 set relativenumber
 set showmatch

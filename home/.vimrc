@@ -9,7 +9,8 @@ Plug 'sheerun/vim-polyglot'
 
 " Nerdtree
 Plug 'preservim/nerdtree' |
-    \ Plug 'Xuyuanp/nerdtree-git-plugin'
+            \ Plug 'Xuyuanp/nerdtree-git-plugin' |
+            \ Plug 'ryanoasis/vim-devicons'
 
 " Brings physics-based smooth scrolling to the Vim/Neovim world!
 Plug 'yuttie/comfortable-motion.vim'
@@ -52,16 +53,13 @@ Plug 'chrisbra/csv.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-" Icons
-Plug 'ryanoasis/vim-devicons'
-
 " Comment
 Plug 'tomtom/tcomment_vim'
 
 " Themes
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'mhartington/oceanic-next'
+Plug 'Mofiqul/vscode.nvim'
 
 Plug 'tranvansang/octave.vim'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
