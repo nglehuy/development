@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
 sudo snap install go --classic
 
@@ -11,7 +11,7 @@ sudo apt install -y gcc g++ clang ruby git make cmake openssh-client wget curl o
     default-jdk default-jre maven \
     ffmpeg libboost-all-dev swig sox \
     neofetch htop xdotool xclip universal-ctags \
-    yarn docker docker-compose
+    docker docker-compose
 
 sudo groupadd docker
 sudo usermod -aG docker $USER

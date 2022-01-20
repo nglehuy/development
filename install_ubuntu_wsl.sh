@@ -1,12 +1,8 @@
 #!/usr/bin/env sh
 
-wget https://golang.org/dl/go1.15.4.linux-amd64.tar.gz
-tar -C /usr/local -xzf go1.15.4.linux-amd64.tar.gz
+wget https://golang.org/dl/go1.17.6.linux-amd64.tar.gz
+tar -C /usr/local -xzf go1.17.6.linux-amd64.tar.gz
 
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 sudo apt update
 
 sudo apt install -y gcc g++ clang ruby git make cmake openssh-client wget curl fzf \
@@ -15,8 +11,7 @@ sudo apt install -y gcc g++ clang ruby git make cmake openssh-client wget curl f
     vim neovim zsh \
     default-jdk default-jre maven \
     ffmpeg libboost-all-dev swig sox \
-    neofetch htop xdotool xclip ctags \
-    nodejs yarn 
+    neofetch htop xdotool xclip ctags
 
 sudo groupadd docker
 sudo usermod -aG docker $USER

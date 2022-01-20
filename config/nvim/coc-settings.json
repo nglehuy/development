@@ -10,7 +10,7 @@
     "html",
     "yaml",
     "json",
-    "python",
+    "python"
   ],
   "python.autoUpdateLanguageServer": true,
   "python.linting.enabled": true,
@@ -22,24 +22,47 @@
   "languageserver": {
     "dockerfile": {
       "command": "docker-langserver",
-      "filetypes": ["dockerfile", "Dockerfile"],
-      "args": ["--stdio"]
+      "filetypes": [
+        "dockerfile",
+        "Dockerfile"
+      ],
+      "args": [
+        "--stdio"
+      ]
     },
     "bash": {
       "command": "bash-language-server",
-      "args": ["start"],
-      "filetypes": ["sh"],
-      "ignoredRootPaths": ["~"]
+      "args": [
+        "start"
+      ],
+      "filetypes": [
+        "sh"
+      ],
+      "ignoredRootPaths": [
+        "~"
+      ]
     },
     "efm": {
       "command": "efm-langserver",
       "args": [],
-      "filetypes": ["vim", "eruby", "markdown", "yaml"]
+      "filetypes": [
+        "vim",
+        "eruby",
+        "markdown",
+        "yaml"
+      ]
     },
     "sql": {
       "command": "sql-language-server",
-      "args": ["up", "--method", "stdio"],
-      "filetypes": ["sql", "mysql"]
+      "args": [
+        "up",
+        "--method",
+        "stdio"
+      ],
+      "filetypes": [
+        "sql",
+        "mysql"
+      ]
     }
   },
   "json.enable": true,

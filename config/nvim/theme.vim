@@ -1,11 +1,7 @@
-set guifont=CaskaydiaCove\ Nerd\ Font\ Mono:h14
+syntax on
 set termguicolors
-let g:sonokai_style = 'default'
-let g:sonokai_enable_italic = 1
-let g:sonokai_disable_italic_comment = 1
-colorscheme sonokai
-let g:airline_theme='sonokai'
-" set relativenumber
+colorscheme OceanicNext
+let g:airline_theme='oceanicnext'
 set number
 set relativenumber
 set showmatch
@@ -15,7 +11,7 @@ set cmdheight=1
 set cursorline
 set background=dark
 
-highlight clear CursorLine " Removes the underline causes by enabling cursorline
+" highlight clear CursorLine " Removes the underline causes by enabling cursorline
 
 let g:python_highlight_all = 1
 

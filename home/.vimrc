@@ -28,15 +28,15 @@ Plug 'Yggdroot/indentLine'
 Plug 'alvan/vim-closetag'
 
 " Vaffle
-Plug 'cocopon/vaffle.vim'
+" Plug 'cocopon/vaffle.vim'
 
 " Markdown
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
 " COC 
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm install --frozen-lockfile'}
-Plug 'vim-python/python-syntax'
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'vim-python/python-syntax'
 
 " OPERATOR TO SURROUND A TEXT OBJECT
 Plug 'kana/vim-operator-user'
@@ -61,12 +61,12 @@ Plug 'tomtom/tcomment_vim'
 " Themes
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'sainnhe/sonokai'
+Plug 'mhartington/oceanic-next'
 
 Plug 'tranvansang/octave.vim'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 
-" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
 Plug 'puremourning/vimspector'
 
@@ -120,4 +120,4 @@ source $HOME/.config/nvim/nerdtree.vim
 
 source $HOME/.config/nvim/denite.vim
 
-" source $HOME/.config/nvim/treesitter.vim
+source $HOME/.config/nvim/treesitter.vim
