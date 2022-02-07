@@ -107,11 +107,10 @@ set switchbuf=useopen,usetab
 
 let g:typescript_indent_disable = 1
 
-" source $HOME/.config/nvim/neovide.vim
-
 source $HOME/.config/nvim/theme.vim
 
 " source $HOME/.config/nvim/vaffle.vim
+
 source $HOME/.config/nvim/nerdtree.vim
 
 " source $HOME/.config/nvim/coc.vim
