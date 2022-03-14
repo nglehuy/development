@@ -5,4 +5,4 @@ if !exists("g:vscode")
   let g:python3_host_prog = $HOME.'/anaconda3/bin/python'
   source ~/.vimrc
 endif
-set guifont=JetBrainsMono\ Nerd\ Font\ Mono:h12
+set guifont=JetBrainsMono\ Nerd\ Font\ Mono:h13
