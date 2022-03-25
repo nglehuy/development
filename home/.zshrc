@@ -46,8 +46,7 @@ export PATH="$PATH:$(yarn global bin)"
 export PATH="$PATH:$(gem env gempath)"
 
 # openvpn brew
-if ! command -v brew &> /dev/null
-then
+if ! [ -x "$(command -v brew)" ]; then
     export PATH=$(brew --prefix openvpn)/sbin:$PATH
 fi
 
