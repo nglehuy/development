@@ -15,7 +15,7 @@ mkdir ~/.swap-files
 nvm install 12
 nvm use 12
 npm install -g yarn
-yarn global spaceship-prompt neovim bash-language-server dockerfile-language-server-nodejs eslint eslint-plugin-vue vls sql-language-server
+yarn global add spaceship-prompt neovim bash-language-server dockerfile-language-server-nodejs eslint eslint-plugin-vue vls sql-language-server
 gem install neovim solargraph
 
 chmod a+x setup_vim.sh && ./setup_vim.sh
