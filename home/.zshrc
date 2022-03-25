@@ -27,8 +27,11 @@ alias gtree="git log --graph --decorate --oneline --all --format=format:'%C(bold
 unsetopt PROMPT_SP
 
 # maven and java
-# export JAVA_HOME=/usr/lib/jvm/default
-export JAVA_HOME="$(/usr/libexec/java_home -v11)"
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    export JAVA_HOME=/usr/lib/jvm/default
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    export JAVA_HOME="$(/usr/libexec/java_home -v11)"
+fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
@@ -46,7 +49,7 @@ export PATH="$PATH:$(yarn global bin)"
 export PATH="$PATH:$(gem env gempath)"
 
 # openvpn brew
-if ! [ -x "$(command -v brew)" ]; then
+if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH=$(brew --prefix openvpn)/sbin:$PATH
 fi
 
