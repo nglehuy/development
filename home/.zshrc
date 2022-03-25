@@ -2,14 +2,14 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export RPS1="%{$reset_color%}"
 export ZSH="$HOME/.zsh/oh-my-zsh"
 
+source $ZSH/oh-my-zsh.sh
+
 plugins=(
     git
     vi-mode
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
-
-source $ZSH/oh-my-zsh.sh
 
 # npm
 export PATH=~/.npm-global/bin:$PATH
@@ -46,7 +46,10 @@ export PATH="$PATH:$(yarn global bin)"
 export PATH="$PATH:$(gem env gempath)"
 
 # openvpn brew
-export PATH=$(brew --prefix openvpn)/sbin:$PATH
+if ! command -v brew &> /dev/null
+then
+    export PATH=$(brew --prefix openvpn)/sbin:$PATH
+fi
 
 export TERM=xterm-256color
 
