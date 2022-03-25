@@ -12,6 +12,10 @@ echo "Installing vim-plug ..."
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 mkdir ~/.swap-files
 
+echo "Installing starship ..."
+curl -sS https://starship.rs/install.sh | sh
+
+echo "Setting up nvm ..."
 nvm install 12
 nvm use 12
 npm install -g yarn
