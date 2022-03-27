@@ -2,14 +2,14 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export RPS1="%{$reset_color%}"
 export ZSH="$HOME/.zsh/oh-my-zsh"
 
-source $ZSH/oh-my-zsh.sh
-
 plugins=(
     git
     vi-mode
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
+
+source $ZSH/oh-my-zsh.sh
 
 # npm
 export PATH=~/.npm-global/bin:$PATH
