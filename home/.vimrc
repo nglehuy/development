@@ -59,7 +59,8 @@ Plug 'tomtom/tcomment_vim'
 " Themes
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'Mofiqul/vscode.nvim'
+" Plug 'Mofiqul/vscode.nvim'
+Plug 'marko-cerovac/material.nvim'
 
 Plug 'tranvansang/octave.vim'
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
