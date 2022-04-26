@@ -1,9 +1,9 @@
 let g:vscode_style = "dark"
-let g:material_style = "lighter"
+let g:material_style = "oceanic"
 syntax on
 set termguicolors
 colorscheme material
-let g:airline_theme='solarized'
+let g:airline_theme='base16'
 let g:airline_solarized_bg='light'
 set number
 set relativenumber
