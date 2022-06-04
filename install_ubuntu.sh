@@ -1,11 +1,11 @@
 #!/bin/bash
 
-wget https://golang.org/dl/go1.18.linux-amd64.tar.gz
+wget -nc https://golang.org/dl/go1.18.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.18.linux-amd64.tar.gz
 
 sudo apt update
 
-wget https://github.com/neovim/neovim/releases/download/v0.7.0/nvim-linux64.deb
+wget -nc https://github.com/neovim/neovim/releases/download/v0.7.0/nvim-linux64.deb
 sudo dpkg -i nvim-linux64.deb
 
 sudo apt install -y gcc g++ clang ruby git make cmake openssh-client wget curl fzf \
