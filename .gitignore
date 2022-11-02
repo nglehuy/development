@@ -1,2 +1,3 @@
 *.tar.gz
 *.deb
+.DS_Store
