@@ -1,6 +1,5 @@
 format = """
-[](fg:#1E1E1E bg:#F44336)\
-[](fg:#F44336 bg:#EF5350)\
+[](fg:#1E1E1E bg:#EF5350)\
 $username\
 [](bg:#FF8A65 fg:#EF5350)\
 $directory\
@@ -19,10 +18,12 @@ $nodejs\
 $nim\
 $rust\
 $python\
-$conda\
 [](fg:#FFF176 bg:#06969A)\
+$conda\
 $docker_context\
-[](fg:#06969A bg:#33658A)\
+[](fg:#06969A)\
+$line_break\
+[](fg:#1E1E1E bg:#33658A)\
 $time\
 [ ](fg:#33658A)\
 """
@@ -62,9 +63,10 @@ style = "bg:#FFF176 fg:#1E1E1E"
 format = '[ $symbol ($version) ]($style)'
 
 [docker_context]
+disabled = false
 symbol = ""
 style = "bg:#06969A fg:#DEDEDE"
-format = '[ $symbol $context ]($style) $path'
+format = '[ $symbol $context ]($style)'
 
 [elixir]
 symbol = ""
@@ -127,11 +129,11 @@ format = '[ $symbol ($version) ]($style)'
 
 [conda]
 symbol = ""
-style = "bg:#FFF176 fg:#1E1E1E"
-format = '[ $symbol ($version) ]($style)'
+style = "bg:#06969A fg:#FFFFFF"
+format = '[ $symbol ($environment) ]($style)'
 
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#33658A"
-format = '[ $time ]($style)'
+format = '[  $time ]($style)'
