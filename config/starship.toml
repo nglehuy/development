@@ -18,11 +18,10 @@ $nodejs\
 $nim\
 $rust\
 $python\
-[](fg:#FFF176 bg:#06969A)\
+[](fg:#FFF176 bg:#00BFA5)\
 $conda\
 $docker_context\
-[](fg:#06969A)\
-$line_break\
+[](fg:#00BFA5)\
 [](fg:#1E1E1E bg:#33658A)\
 $time\
 [ ](fg:#33658A)\
@@ -65,7 +64,7 @@ format = '[ $symbol ($version) ]($style)'
 [docker_context]
 disabled = false
 symbol = ""
-style = "bg:#06969A fg:#DEDEDE"
+style = "bg:#00BFA5 fg:#1E1E1E"
 format = '[ $symbol $context ]($style)'
 
 [elixir]
@@ -129,7 +128,7 @@ format = '[ $symbol ($version) ]($style)'
 
 [conda]
 symbol = ""
-style = "bg:#06969A fg:#FFFFFF"
+style = "bg:#00BFA5 fg:#1E1E1E"
 format = '[ $symbol ($environment) ]($style)'
 
 [time]
