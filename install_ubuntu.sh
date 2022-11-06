@@ -10,11 +10,11 @@ sudo dpkg -i nvim-linux64.deb
 
 sudo apt install -y gcc g++ clang ruby git make cmake openssh-client wget curl fzf \
     p7zip unrar unzip zip bzip2 gzip lrzip lz4 lzip lzop xz-utils tar \
-    openssl zlibc readline-common sqlite llvm tk libffi7 libffi-dev \
+    openssl readline-common sqlite llvm tk libffi7 libffi-dev \
     vim zsh \
     default-jdk default-jre maven \
     ffmpeg libboost-all-dev swig sox \
-    neofetch htop xdotool xclip ctags \
+    neofetch htop xdotool xclip \
     ruby-dev
 
 sudo groupadd docker
