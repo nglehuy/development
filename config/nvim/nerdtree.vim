@@ -1,6 +1,6 @@
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
-let g:NERDTreeWinSize = 48
+let g:NERDTreeWinSize = 38
 let g:webdevicons_conceal_nerdtree_brackets = 1
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 let g:NERDTreeShowHidden = 1
