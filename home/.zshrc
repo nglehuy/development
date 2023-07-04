@@ -1,4 +1,5 @@
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+eval "$(starship init zsh)"
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export RPS1="%{$reset_color%}"
 export ZSH="$HOME/.zsh/oh-my-zsh"
 
@@ -27,11 +28,8 @@ alias gtree="git log --graph --decorate --oneline --all --format=format:'%C(bold
 unsetopt PROMPT_SP
 
 # maven and java
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    export JAVA_HOME=/usr/lib/jvm/default
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-    export JAVA_HOME="$(/usr/libexec/java_home -v11)"
-fi
+# export JAVA_HOME=/usr/lib/jvm/default
+export JAVA_HOME="$(/usr/libexec/java_home -v11)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
@@ -49,9 +47,7 @@ export PATH="$PATH:$(yarn global bin)"
 export PATH="$PATH:$(gem env gempath)"
 
 # openvpn brew
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    export PATH=$(brew --prefix openvpn)/sbin:$PATH
-fi
+export PATH=$(brew --prefix openvpn)/sbin:$PATH
 
 export TERM=xterm-256color
 
@@ -68,24 +64,21 @@ fi
 # Golang
 export PATH="$PATH:/usr/local/go/bin:$HOME/go/bin"
 
+# Make
+export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+
+# OpenMP
+export CC=/usr/bin/gcc
+export CXX=/usr/bin/g++
+export CPPFLAGS="$CPPFLAGS -Xpreprocessor -fopenmp"
+export CFLAGS="$CFLAGS -I/usr/local/opt/libomp/include"
+export CXXFLAGS="$CXXFLAGS -I/usr/local/opt/libomp/include"
+export LDFLAGS="$LDFLAGS -Wl,-rpath,/usr/local/opt/libomp/lib -L/usr/local/opt/libomp/lib -lomp"
+
 # Android
 export ANDROID_SDK="$HOME/Library/Android/sdk"
+export ANDROID_HOME=$ANDROID_SDK
 export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/nlhuy/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/nlhuy/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/nlhuy/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/nlhuy/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/nlhuy/google-cloud-sdk/path.zsh.inc' ]; then . '/home/nlhuy/google-cloud-sdk/path.zsh.inc'; fi
@@ -93,4 +86,22 @@ if [ -f '/home/nlhuy/google-cloud-sdk/path.zsh.inc' ]; then . '/home/nlhuy/googl
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/nlhuy/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/nlhuy/google-cloud-sdk/completion.zsh.inc'; fi
 
-eval "$(starship init zsh)"
+export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
+
+export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/nlhuy/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/nlhuy/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/nlhuy/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/nlhuy/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
