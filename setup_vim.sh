@@ -3,6 +3,9 @@
 echo "Removing previous vim plugs ..."
 rm -rf $HOME/.vim/plugged
 
+echo "Install python neovim ..."
+python3 -m pip install --user neovim
+
 echo "Setting up configurations ..."
 cp $PWD/home/.vimrc $HOME/.vimrc
 mkdir -p $HOME/.config/nvim && yes | cp -r $PWD/config/nvim/* $HOME/.config/nvim
