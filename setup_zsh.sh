@@ -12,5 +12,5 @@ export ZSH="$HOME/.zsh/oh-my-zsh"
 echo "Setting config zsh ..."
 cp $PWD/home/.zshrc $HOME/.zshrc
 
-chsh -s /usr/bin/zsh
-sudo chsh -s /usr/bin/zsh
+chsh -s $(which zsh)
+sudo chsh -s $(which zsh)

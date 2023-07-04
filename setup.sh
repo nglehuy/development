@@ -25,4 +25,6 @@ sudo gem install neovim solargraph
 chmod a+x setup_vim.sh && ./setup_vim.sh
 chmod a+x setup_zsh.sh && ./setup_zsh.sh
 
+cp $PWD/config/starship.toml $HOME/.config/starship.toml
+
 echo "Done installation."
