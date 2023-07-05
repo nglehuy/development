@@ -16,9 +16,6 @@ source $ZSH/oh-my-zsh.sh
 export PATH=~/.npm-global/bin:$PATH
 
 # alias
-alias cp='cp -vR'
-alias mv='mv -v'
-alias rm='rm -R'
 alias nvide="nohup env DRI_PRIME=1 neovide --geometry=260x150 > /dev/null 2>&1 & disown"
 alias gtree="git log --graph --decorate --oneline --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
 
@@ -70,10 +67,10 @@ export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 # OpenMP
 export CC=/usr/bin/gcc
 export CXX=/usr/bin/g++
-export CPPFLAGS="$CPPFLAGS -Xpreprocessor -fopenmp"
-export CFLAGS="$CFLAGS -I/usr/local/opt/libomp/include"
-export CXXFLAGS="$CXXFLAGS -I/usr/local/opt/libomp/include"
-export LDFLAGS="$LDFLAGS -Wl,-rpath,/usr/local/opt/libomp/lib -L/usr/local/opt/libomp/lib -lomp"
+# export CPPFLAGS="$CPPFLAGS -Xpreprocessor -fopenmp"
+# export CFLAGS="$CFLAGS -I/usr/local/opt/libomp/include"
+# export CXXFLAGS="$CXXFLAGS -I/usr/local/opt/libomp/include"
+# export LDFLAGS="$LDFLAGS -Wl,-rpath,/usr/local/opt/libomp/lib -L/usr/local/opt/libomp/lib -lomp"
 
 # Android
 export ANDROID_SDK="$HOME/Library/Android/sdk"
@@ -86,20 +83,18 @@ if [ -f '/home/nlhuy/google-cloud-sdk/path.zsh.inc' ]; then . '/home/nlhuy/googl
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/nlhuy/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/nlhuy/google-cloud-sdk/completion.zsh.inc'; fi
 
-export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
-
-export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk
+export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.sdk
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/nlhuy/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$($HOME/miniconda3/bin/conda 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/nlhuy/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/nlhuy/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/nlhuy/miniconda3/bin:$PATH"
+        export PATH="$HOME/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
