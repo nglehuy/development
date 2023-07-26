@@ -67,6 +67,8 @@ export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 # OpenMP
 export CC=/usr/bin/gcc
 export CXX=/usr/bin/g++
+export LDFLAGS="-L$(brew --prefix openssl)/lib"
+export CFLAGS="-I$(brew --prefix openssl)/include"
 # export CPPFLAGS="$CPPFLAGS -Xpreprocessor -fopenmp"
 # export CFLAGS="$CFLAGS -I/usr/local/opt/libomp/include"
 # export CXXFLAGS="$CXXFLAGS -I/usr/local/opt/libomp/include"

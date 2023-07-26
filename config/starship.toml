@@ -4,4 +4,6 @@ add_newline = true
 success_symbol = "[🍀](bold green)"
 error_symbol = "[🥲](bold red) "
 
-
+[git_commit]
+tag_disabled = false
+tag_symbol = " 🔖 "
