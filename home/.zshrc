@@ -1,4 +1,3 @@
-eval "$(starship init zsh)"
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export RPS1="%{$reset_color%}"
 export ZSH="$HOME/.zsh/oh-my-zsh"
@@ -105,3 +104,6 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+
+# init starship, always bottom
+eval "$(starship init zsh)"
