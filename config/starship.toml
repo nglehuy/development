@@ -1,3 +1,5 @@
+add_newline = false
+
 [username]
 show_always = true
 format = '[$user]($style) on '
@@ -34,6 +36,9 @@ symbol = " "
 
 [git_branch]
 symbol = " "
+
+[git_commit]
+tag_disabled = false
 
 [golang]
 symbol = " "

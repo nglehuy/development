@@ -1,3 +1,5 @@
+export PROMPT_COMMAND="echo"
+precmd() { eval "$PROMPT_COMMAND" }
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export RPS1="%{$reset_color%}"
 export ZSH="$HOME/.zsh/oh-my-zsh"
@@ -39,9 +41,6 @@ export NVM_DIR="$HOME/.nvm"
 # yarn
 export PATH="$PATH:$(yarn global bin)"
 
-# Ruby
-export PATH="$PATH:$(gem env gempath)"
-
 # openvpn brew
 export PATH=$(brew --prefix openvpn)/sbin:$PATH
 
@@ -64,8 +63,8 @@ export PATH="$PATH:/usr/local/go/bin:$HOME/go/bin"
 export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 
 # OpenMP
-export CC=/usr/bin/gcc
-export CXX=/usr/bin/g++
+export CC=$(which gcc-13)
+export CXX=$(which g++-13)
 export LDFLAGS="-L$(brew --prefix openssl)/lib"
 export CFLAGS="-I$(brew --prefix openssl)/include"
 # export CPPFLAGS="$CPPFLAGS -Xpreprocessor -fopenmp"
@@ -84,8 +83,9 @@ if [ -f '/home/nlhuy/google-cloud-sdk/path.zsh.inc' ]; then . '/home/nlhuy/googl
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/nlhuy/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/nlhuy/google-cloud-sdk/completion.zsh.inc'; fi
 
-export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.sdk
+export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.sdk
 
+export PATH=$(brew --prefix make)/libexec/gnubin:$PATH
 
 
 # >>> conda initialize >>>

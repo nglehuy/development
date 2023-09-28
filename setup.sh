@@ -20,7 +20,6 @@ nvm install --lts
 nvm use --lts
 npm install -g yarn
 yarn global add spaceship-prompt neovim bash-language-server dockerfile-language-server-nodejs eslint eslint-plugin-vue vls sql-language-server
-sudo gem install neovim solargraph
 
 chmod a+x setup_vim.sh && ./setup_vim.sh
 chmod a+x setup_zsh.sh && ./setup_zsh.sh
