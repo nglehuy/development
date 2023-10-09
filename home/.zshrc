@@ -1,7 +1,6 @@
 export PROMPT_COMMAND="echo"
 precmd() { eval "$PROMPT_COMMAND" }
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
-export RPS1="%{$reset_color%}"
 export ZSH="$HOME/.zsh/oh-my-zsh"
 
 plugins=(
