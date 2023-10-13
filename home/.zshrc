@@ -62,8 +62,8 @@ export PATH="$PATH:/usr/local/go/bin:$HOME/go/bin"
 export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 
 # OpenMP
-export CC=$(which gcc-13)
-export CXX=$(which g++-13)
+export CC=$(which gcc)
+export CXX=$(which g++)
 export LDFLAGS="-L$(brew --prefix openssl)/lib"
 export CFLAGS="-I$(brew --prefix openssl)/include"
 # export CPPFLAGS="$CPPFLAGS -Xpreprocessor -fopenmp"
