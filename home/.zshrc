@@ -61,7 +61,7 @@ export PATH="$PATH:/usr/local/go/bin:$HOME/go/bin"
 # Make
 export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 
-# OpenMP
+# GCC/G++
 export CC=$(which gcc)
 export CXX=$(which g++)
 export LDFLAGS="-L$(brew --prefix openssl)/lib"
@@ -70,6 +70,8 @@ export CFLAGS="-I$(brew --prefix openssl)/include"
 # export CFLAGS="$CFLAGS -I/usr/local/opt/libomp/include"
 # export CXXFLAGS="$CXXFLAGS -I/usr/local/opt/libomp/include"
 # export LDFLAGS="$LDFLAGS -Wl,-rpath,/usr/local/opt/libomp/lib -L/usr/local/opt/libomp/lib -lomp"
+export GRPC_PYTHON_BUILD_SYSTEM_OPENSSL=1
+export GRPC_PYTHON_BUILD_SYSTEM_ZLIB=1
 
 # Android
 export ANDROID_SDK="$HOME/Library/Android/sdk"
@@ -106,3 +108,4 @@ export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 
 # init starship, always bottom
 eval "$(starship init zsh)"
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
