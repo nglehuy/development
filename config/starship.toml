@@ -1,12 +1,12 @@
 add_newline = false
 
 [username]
-show_always = true
+show_always = false
 format = '[$user]($style) on '
 
 [git_commit]
 tag_disabled = false
 
 [hostname]
-ssh_only = false
+ssh_only = true
 

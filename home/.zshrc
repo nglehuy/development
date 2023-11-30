@@ -105,6 +105,8 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+export AWS_DEFAULT_REGION="us-west-2"
 
 # init starship, always bottom
 eval "$(starship init zsh)"
