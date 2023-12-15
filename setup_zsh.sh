@@ -14,3 +14,8 @@ cp $PWD/home/.zshrc $HOME/.zshrc
 
 chsh -s $(which zsh)
 sudo chsh -s $(which zsh)
+
+git config --global core.editor "nvim"
+git config --global pull.rebase true
+git config --global push.autoSetupRemote true
+
