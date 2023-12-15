@@ -12,14 +12,11 @@ echo "Installing vim-plug ..."
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 mkdir ~/.swap-files
 
-echo "Installing starship ..."
-curl -sS https://starship.rs/install.sh | sh
-
 echo "Setting up nvm ..."
 nvm install --lts
 nvm use --lts
 npm install -g yarn
-yarn global add spaceship-prompt neovim bash-language-server dockerfile-language-server-nodejs eslint eslint-plugin-vue vls sql-language-server
+# yarn global add spaceship-prompt neovim bash-language-server dockerfile-language-server-nodejs eslint eslint-plugin-vue vls sql-language-server
 
 chmod a+x setup_vim.sh && ./setup_vim.sh
 chmod a+x setup_zsh.sh && ./setup_zsh.sh

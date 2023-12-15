@@ -19,3 +19,6 @@ sudo apt install -y gcc g++ clang ruby git make cmake openssh-client wget curl f
 
 sudo groupadd docker
 sudo usermod -aG docker $USER
+
+echo "Installing starship ..."
+curl -sS https://starship.rs/install.sh | sh

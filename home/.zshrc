@@ -1,6 +1,8 @@
 export PROMPT_COMMAND="echo"
-precmd() { eval "$PROMPT_COMMAND" }
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
+precmd() {
+    eval "$PROMPT_COMMAND"
+}
+export PATH=/opt/homebrew/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export ZSH="$HOME/.zsh/oh-my-zsh"
 
 plugins=(

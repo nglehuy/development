@@ -11,3 +11,6 @@ sudo pacman -Syu --noconfirm --needed gcc clang go ruby git make cmake openssh w
     ffmpeg \
     boost swig sox \
     neofetch htop xdotool xclip ctags
+
+echo "Installing starship ..."
+curl -sS https://starship.rs/install.sh | sh

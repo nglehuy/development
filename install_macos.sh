@@ -4,6 +4,6 @@ brew install \
     ffmpeg neofetch swig sox vim neovim git python3 espeak \
     rust go make cmake gcc openssl curl wget fzf \
     clang-format gradle maven openjdk llvm libomp mecab automake grpc protobuf \
-    bazelisk coreutils
+    bazelisk coreutils starship
 
 sudo ln -sfn $HOMEBREW_PREFIX/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
