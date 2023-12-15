@@ -47,19 +47,17 @@ export TERM=xterm-256color
 
 # Fix snap apps in wayland
 if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
-
     # Fix environment for Wayland + zsh + snapd
     if [ -f "/etc/profile.d/apps-bin-path.sh" ]; then
         source /etc/profile.d/apps-bin-path.sh
     fi
-
 fi
 
 # Golang
-export PATH="$PATH:/usr/local/go/bin:$HOME/go/bin"
+export PATH="$PATH:$(brew --prefix go)/bin:$HOME/go/bin"
 
 # Make
-export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+export PATH=$(brew --prefix make)/libexec/gnubin:$PATH
 
 # GCC/G++
 export CC=$(which gcc)
@@ -86,9 +84,6 @@ if [ -f '/home/nlhuy/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/nlhuy
 
 export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.sdk
 
-export PATH=$(brew --prefix make)/libexec/gnubin:$PATH
-
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/nglehuy/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -104,8 +99,8 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
-export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+export PATH="$(brew --prefix postgresql)/bin:$PATH"
+export PATH="$(brew --prefix curl)/bin:$PATH"
 export AWS_DEFAULT_REGION="us-west-2"
 
 # init starship, always bottom
