@@ -1,8 +1,8 @@
+export PATH=/opt/homebrew/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export PROMPT_COMMAND="echo"
 precmd() {
     eval "$PROMPT_COMMAND"
 }
-export PATH=/opt/homebrew/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export ZSH="$HOME/.zsh/oh-my-zsh"
 
 plugins=(
@@ -62,8 +62,10 @@ export PATH="$PATH:$(brew --prefix go)/bin:$HOME/go/bin"
 export PATH=$(brew --prefix make)/libexec/gnubin:$PATH
 
 # GCC/G++
-export CC=$(which gcc)
-export CXX=$(which g++)
+# export CC=$(which gcc)
+# export CXX=$(which g++)
+export CC="$(brew --prefix gcc)/bin/gcc-13"
+export CXX="$(brew --prefix gcc)/bin/g++-13"
 export LDFLAGS="-L$(brew --prefix openssl)/lib"
 export CFLAGS="-I$(brew --prefix openssl)/include"
 # export CPPFLAGS="$CPPFLAGS -Xpreprocessor -fopenmp"
@@ -78,24 +80,21 @@ export ANDROID_SDK="$HOME/Library/Android/sdk"
 export ANDROID_HOME=$ANDROID_SDK
 export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/nlhuy/google-cloud-sdk/path.zsh.inc' ]; then . '/home/nlhuy/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/nlhuy/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/nlhuy/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc" ]; then source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"; fi
+if [ -f "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc" ]; then source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"; fi
 
 export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.sdk
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/nglehuy/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/nlhuycs/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/nglehuy/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/nglehuy/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/nlhuycs/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/nlhuycs/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/nglehuy/miniconda3/bin:$PATH"
+        export PATH="/Users/nlhuycs/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -105,6 +104,7 @@ export PATH="$(brew --prefix postgresql)/bin:$PATH"
 export PATH="$(brew --prefix curl)/bin:$PATH"
 export AWS_DEFAULT_REGION="us-west-2"
 
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+
 # init starship, always bottom
 eval "$(starship init zsh)"
-[[ $commands[kubectl] ]] && source <(kubectl completion zsh)

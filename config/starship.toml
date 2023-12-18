@@ -10,3 +10,10 @@ tag_disabled = false
 [hostname]
 ssh_only = true
 
+[aws]
+format = 'on [$symbol($profile )(\($region\) )]($style)'
+style = 'bold yellow'
+symbol = '🅰 '
+[aws.profile_aliases]
+CompanyGroupFrobozzOnCallAccess = 'Frobozz'
+
