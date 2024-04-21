@@ -1,4 +1,4 @@
-export PATH=/opt/homebrew/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export PROMPT_COMMAND="echo"
 precmd() {
     eval "$PROMPT_COMMAND"
@@ -20,6 +20,8 @@ export PATH=~/.npm-global/bin:$PATH
 # alias
 alias nvide="nohup env DRI_PRIME=1 neovide --geometry=260x150 > /dev/null 2>&1 & disown"
 alias gtree="git log --graph --decorate --oneline --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
+alias syscc="export CC=$(which gcc) CXX=$(which g++)"
+alias brewcc="export CC=$(brew --prefix gcc)/bin/gcc-13 CXX=$(brew --prefix gcc)/bin/g++-13"
 
 # (cat ~/.cache/wal/sequences &)
 
@@ -64,8 +66,8 @@ export PATH=$(brew --prefix make)/libexec/gnubin:$PATH
 # GCC/G++
 # export CC=$(which gcc)
 # export CXX=$(which g++)
-export CC="$(brew --prefix gcc)/bin/gcc-13"
-export CXX="$(brew --prefix gcc)/bin/g++-13"
+# export CC="$(brew --prefix gcc)/bin/gcc-13"
+# export CXX="$(brew --prefix gcc)/bin/g++-13"
 export LDFLAGS="-L$(brew --prefix openssl)/lib"
 export CFLAGS="-I$(brew --prefix openssl)/include"
 # export CPPFLAGS="$CPPFLAGS -Xpreprocessor -fopenmp"
@@ -83,7 +85,7 @@ export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 if [ -f "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc" ]; then source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"; fi
 if [ -f "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc" ]; then source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"; fi
 
-export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.sdk
+# export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.sdk
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -100,7 +102,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export PATH="$(brew --prefix postgresql)/bin:$PATH"
+export PATH="$(brew --prefix postgresql@14)/bin:$PATH"
 export PATH="$(brew --prefix curl)/bin:$PATH"
 export AWS_DEFAULT_REGION="us-west-2"
 
