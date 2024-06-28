@@ -92,6 +92,7 @@ $container\
 $shell\
 $character"""
 
+
 [aws]
 format = "on [$symbol($profile )(\\($region\\) )]($style)"
 symbol = " "

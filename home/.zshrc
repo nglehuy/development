@@ -1,3 +1,13 @@
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=1000000
+SAVEHIST=1000000
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
+
 export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export PROMPT_COMMAND="echo"
 precmd() {
@@ -64,8 +74,8 @@ export PATH="$PATH:$(brew --prefix go)/bin:$HOME/go/bin"
 export PATH=$(brew --prefix make)/libexec/gnubin:$PATH
 
 # GCC/G++
-# export CC=$(which gcc)
-# export CXX=$(which g++)
+export CC=$(which gcc)
+export CXX=$(which g++)
 # export CC="$(brew --prefix gcc)/bin/gcc-13"
 # export CXX="$(brew --prefix gcc)/bin/g++-13"
 export LDFLAGS="-L$(brew --prefix openssl)/lib"
