@@ -32,6 +32,7 @@ alias nvide="nohup env DRI_PRIME=1 neovide --geometry=260x150 > /dev/null 2>&1 &
 alias gtree="git log --graph --decorate --oneline --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
 alias syscc="export CC=$(which gcc) CXX=$(which g++)"
 alias brewcc="export CC=$(brew --prefix gcc)/bin/gcc-13 CXX=$(brew --prefix gcc)/bin/g++-13"
+alias lso="ls -alG | awk '{k=0;for(i=0;i<=8;i++)k+=((substr(\$1,i+2,1)~/[rwx]/)*2^(8-i));if(k)printf(\" %0o \",k);print}'"
 
 # (cat ~/.cache/wal/sequences &)
 
@@ -48,11 +49,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# yarn
-export PATH="$PATH:$(yarn global bin)"
+[ -s "$NVM_DIR/nvm.sh" ] && echo "Hold onto your hat, 'nvm' loading... It's super slow..." && \. "$NVM_DIR/nvm.sh" && echo "Done loading 'nvm'"  # This loads nvm
 
 # openvpn brew
 export PATH=$(brew --prefix openvpn)/sbin:$PATH
@@ -115,8 +112,6 @@ unset __conda_setup
 export PATH="$(brew --prefix postgresql@14)/bin:$PATH"
 export PATH="$(brew --prefix curl)/bin:$PATH"
 export AWS_DEFAULT_REGION="us-west-2"
-
-[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
 # init starship, always bottom
 eval "$(starship init zsh)"
