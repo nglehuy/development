@@ -16,3 +16,7 @@ cp -rv $source_dir/.config/* $target_dir/.config
 cp -rv $source_dir/.zsh* $target_dir
 
 cp -rv $source_dir/.gitconfig $target_dir
+
+mkdir -p $target_dir/.ssh
+cp -rv $source_dir/.ssh/id_rsa* $target_dir/.ssh
+cp -rv $source_dir/.ssh/known_hosts $target_dir/.ssh
