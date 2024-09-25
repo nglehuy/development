@@ -8,6 +8,8 @@ setopt HIST_IGNORE_SPACE
 setopt HIST_FIND_NO_DUPS
 setopt HIST_SAVE_NO_DUPS
 
+export HOMEBREW_NO_AUTO_UPDATE=1
+
 export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export PROMPT_COMMAND="echo"
 precmd() {

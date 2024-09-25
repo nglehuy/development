@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-go get github.com/mattn/efm-langserver
+go install github.com/mattn/efm-langserver@latest
 
 echo "Installing nvm ..."
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
