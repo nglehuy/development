@@ -10,4 +10,7 @@ brew install \
     iproute2mac flock \
     font-recursive-mono-nerd-font
 
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
+
 sudo ln -sfn $HOMEBREW_PREFIX/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
