@@ -20,3 +20,6 @@ cp -rv $source_dir/.gitconfig $target_dir
 mkdir -p $target_dir/.ssh
 cp -rv $source_dir/.ssh/id_rsa* $target_dir/.ssh
 cp -rv $source_dir/.ssh/known_hosts $target_dir/.ssh
+
+mkdir -p $target_dir/.oci
+cp -rv $source_dir/.oci/* $target_dir/.oci
