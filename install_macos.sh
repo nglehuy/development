@@ -7,11 +7,13 @@ brew install \
     bazelisk coreutils \
     openssh openvpn postgresql@14 kubectl k9s ansible \
     starship google-cloud-sdk \
-    iproute2mac flock golang-migrate \
+    iproute2mac socat flock golang-migrate \
     font-recursive-mono-nerd-font
 
 brew tap hashicorp/tap
 brew install hashicorp/tap/terraform
+
+brew install --cask balenaetcher
 
 sudo ln -sfn $HOMEBREW_PREFIX/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 sudo ln -sfn $HOMEBREW_PREFIX/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
