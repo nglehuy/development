@@ -117,3 +117,4 @@ export AWS_DEFAULT_REGION="us-west-2"
 
 # init starship, always bottom
 eval "$(starship init zsh)"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

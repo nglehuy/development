@@ -1,5 +1,7 @@
 add_newline = false
 
+command_timeout = 2000
+
 format = """
 [╭╴](fg:#505050)\
 $username\
@@ -136,6 +138,9 @@ format = "on [$symbol$account(\\($region\\))]($style) "
 
 [git_branch]
 symbol = " "
+
+[git_commit]
+tag_disabled = false
 
 [golang]
 symbol = " "
