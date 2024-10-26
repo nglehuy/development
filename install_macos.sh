@@ -5,7 +5,7 @@ brew install \
     rust go make cmake gcc jemalloc openssl curl wget fzf \
     clang-format gradle maven openjdk openjdk@11 llvm libomp mecab automake grpc protobuf \
     bazelisk coreutils \
-    openssh openvpn postgresql@14 kubectl k9s ansible \
+    openssh openvpn postgresql@14 kubectl k9s ansible telnet \
     starship google-cloud-sdk \
     iproute2mac socat flock golang-migrate \
     font-recursive-mono-nerd-font
