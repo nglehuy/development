@@ -15,6 +15,8 @@ cp -rv $source_dir/.config/* $target_dir/.config
 
 cp -rv $source_dir/.zsh* $target_dir
 
+cp -rv $source_dir/.tmux* $target_dir
+
 cp -rv $source_dir/.gitconfig $target_dir
 
 mkdir -p $target_dir/.ssh

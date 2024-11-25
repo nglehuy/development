@@ -5,9 +5,9 @@ brew install \
     rust go make cmake gcc jemalloc openssl curl wget fzf \
     clang-format gradle maven openjdk openjdk@11 llvm libomp mecab automake grpc protobuf \
     bazelisk coreutils \
-    openssh openvpn postgresql@14 kubectl k9s helm telnet cfssl \
-    starship google-cloud-sdk \
-    iproute2mac socat flock golang-migrate \
+    openssh openvpn postgresql@14 kubectl k9s helm telnet cfssl nmap \
+    tmux starship google-cloud-sdk \
+    iproute2mac socat flock golang-migrate pnpm \
     font-recursive-mono-nerd-font
 
 # [Terraform] CLI
@@ -21,6 +21,9 @@ brew install --cask balenaetcher
 brew tap mongodb/brew
 brew update
 brew install mongodb-database-tools
+
+# Unarchiver
+brew install --cask the-unarchiver
 
 # [Java] Symlinks
 sudo ln -sfn $HOMEBREW_PREFIX/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
