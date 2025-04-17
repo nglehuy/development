@@ -6,7 +6,7 @@ brew install \
     clang-format gradle maven openjdk openjdk@11 llvm libomp mecab automake grpc protobuf \
     bazelisk coreutils \
     openssh openvpn postgresql@14 kubectl k9s helm telnet cfssl nmap \
-    tmux starship google-cloud-sdk \
+    tmux starship \
     iproute2mac socat flock golang-migrate pnpm unixodbc \
     font-recursive-mono-nerd-font
 
@@ -16,6 +16,9 @@ brew install hashicorp/tap/terraform
 
 # [Etcher] Tools to flash OS images to SD cards & USB drives
 brew install --cask balenaetcher
+
+# [Google Cloud SDK] CLI
+brew install --cask google-cloud-sdk
 
 # [MongoDB] Install MongoDB Database Tools
 brew tap mongodb/brew
