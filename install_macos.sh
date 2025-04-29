@@ -8,7 +8,8 @@ brew install \
     openssh openvpn postgresql@14 kubectl k9s helm telnet cfssl nmap \
     tmux starship \
     iproute2mac socat flock golang-migrate pnpm unixodbc \
-    font-recursive-mono-nerd-font
+    font-recursive-mono-nerd-font \
+    minikube
 
 # [Terraform] CLI
 brew tap hashicorp/tap
