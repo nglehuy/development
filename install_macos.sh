@@ -3,6 +3,7 @@
 brew install \
     ffmpeg neofetch swig sox vim neovim git git-lfs python3 python@3.10 python@3.11 python@3.12 espeak \
     rust go make cmake gcc jemalloc openssl curl wget fzf \
+    pybind11 abseil re2 libffi xmlsec1 \
     clang-format gradle maven openjdk openjdk@11 llvm libomp mecab automake grpc protobuf \
     bazelisk coreutils \
     openssh openvpn postgresql@14 kubectl k9s helm telnet cfssl nmap \
