@@ -1,3 +1,4 @@
+set mouse=a
 set nocompatible              " be iMproved, required
 set autoread
 set hidden

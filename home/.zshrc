@@ -75,14 +75,21 @@ export PATH=$(brew --prefix make)/libexec/gnubin:$PATH
 # GCC/G++
 export CC=$(which gcc)
 export CXX=$(which g++)
-# export CC="$(brew --prefix gcc)/bin/gcc-13"
-# export CXX="$(brew --prefix gcc)/bin/g++-13"
-export LDFLAGS="-L$(brew --prefix openssl)/lib"
-export CFLAGS="-I$(brew --prefix openssl)/include"
+# export CC=$(which clang)
+# export CXX=$(which clang++)
+# export CC="$(brew --prefix)/bin/gcc-14"
+# export CXX="$(brew --prefix)/bin/g++-14"
+
+export LDFLAGS="-L/opt/homebrew/lib -L$(brew --prefix xmlsec1)/lib -L$(brew --prefix libffi)/lib -L$(brew --prefix re2)/lib -L$(brew --prefix pybind11)/lib -L$(brew --prefix abseil)/lib -L$(brew --prefix openssl)/lib"
+export CFLAGS="-I/opt/homebrew/include -I$(brew --prefix xmlsec1)/include -I$(brew --prefix libffi)/include -I$(brew --prefix re2)/include -I$(brew --prefix pybind11)/include -I$(brew --prefix abseil)/include -I$(brew --prefix openssl)/include"
+export CXXFLAGS="-std=c++17 -fPIC $CFLAGS"
+export CPPFLAGS=$CXXFLAGS
+
 # export CPPFLAGS="$CPPFLAGS -Xpreprocessor -fopenmp"
 # export CFLAGS="$CFLAGS -I/usr/local/opt/libomp/include"
 # export CXXFLAGS="$CXXFLAGS -I/usr/local/opt/libomp/include"
 # export LDFLAGS="$LDFLAGS -Wl,-rpath,/usr/local/opt/libomp/lib -L/usr/local/opt/libomp/lib -lomp"
+#
 export GRPC_PYTHON_BUILD_SYSTEM_OPENSSL=1
 export GRPC_PYTHON_BUILD_SYSTEM_ZLIB=1
 
@@ -118,3 +125,11 @@ export AWS_DEFAULT_REGION="us-west-2"
 # init starship, always bottom
 eval "$(starship init zsh)"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Created by `pipx` on 2024-12-29 13:16:12
+export PATH="$PATH:/Users/nlhuycs/.local/bin"
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/nlhuycs/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
