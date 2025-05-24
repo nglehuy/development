@@ -30,6 +30,9 @@ brew install mongodb-database-tools
 # Unarchiver
 brew install --cask the-unarchiver
 
+# Miniconda
+brew install --cask miniconda
+
 # [Java] Symlinks
 sudo ln -sfn $HOMEBREW_PREFIX/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 sudo ln -sfn $HOMEBREW_PREFIX/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
