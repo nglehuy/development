@@ -6,7 +6,7 @@ brew install \
     pybind11 abseil re2 libffi xmlsec1 \
     clang-format gradle maven openjdk openjdk@11 llvm libomp mecab automake grpc protobuf \
     bazelisk coreutils \
-    openssh openvpn postgresql@14 kubectl k9s helm telnet cfssl nmap \
+    openssh openvpn postgresql@14 kubectl k9s helm telnet cfssl nmap trufflehog \
     tmux starship \
     iproute2mac socat flock golang-migrate pnpm unixodbc swaks \
     font-recursive-mono-nerd-font \
