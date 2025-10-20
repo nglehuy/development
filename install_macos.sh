@@ -10,7 +10,7 @@ brew install \
     tmux starship \
     iproute2mac socat flock golang-migrate pnpm unixodbc swaks \
     font-recursive-mono-nerd-font \
-    minikube graphviz
+    minikube graphviz istioctl
 
 # [Terraform] CLI
 brew tap hashicorp/tap
