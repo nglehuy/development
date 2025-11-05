@@ -39,3 +39,6 @@ sudo ln -sfn $HOMEBREW_PREFIX/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/J
 
 # [Keyboard] disable press and hold to make keyboard repeat faster
 defaults write -g ApplePressAndHoldEnabled -bool false 
+
+# Font
+brew install --cask font-maple-mono-nf
