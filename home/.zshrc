@@ -147,6 +147,7 @@ cpproj () {
         --exclude='**/venv*' \
         --exclude='.venv*' \
         --exclude='**/.venv*' \
+        --exclude='._*' \
         "$@" \
         "$src" "$dst"
 }
