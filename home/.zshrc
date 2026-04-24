@@ -51,7 +51,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && echo "Hold onto your hat, 'nvm' loading... It's super slow..." && \. "$NVM_DIR/nvm.sh" && echo "Done loading 'nvm'"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # openvpn brew
 export PATH=$(brew --prefix openvpn)/sbin:$PATH
@@ -82,8 +82,7 @@ export CXX=$(which g++)
 
 export LDFLAGS="-L/opt/homebrew/lib -L$(brew --prefix xmlsec1)/lib -L$(brew --prefix libffi)/lib -L$(brew --prefix re2)/lib -L$(brew --prefix pybind11)/lib -L$(brew --prefix abseil)/lib -L$(brew --prefix openssl)/lib"
 export CFLAGS="-I/opt/homebrew/include -I$(brew --prefix xmlsec1)/include -I$(brew --prefix libffi)/include -I$(brew --prefix re2)/include -I$(brew --prefix pybind11)/include -I$(brew --prefix abseil)/include -I$(brew --prefix openssl)/include"
-export CXXFLAGS="-std=c++17 -fPIC $CFLAGS"
-export CPPFLAGS=$CXXFLAGS
+export CPPFLAGS="-fPIC $CFLAGS"
 
 # export CPPFLAGS="$CPPFLAGS -Xpreprocessor -fopenmp"
 # export CFLAGS="$CFLAGS -I/usr/local/opt/libomp/include"
@@ -122,5 +121,32 @@ autoload -Uz compinit
 compinit
 # End of Docker CLI completions
 
+# DrKumo
+export DRKUMO_BE_STACK="/Volumes/Kioxia/DrKumo/Projects/Others/drkumo-be-stack"
+alias d5="AWS_PROFILE=drkumo-d5-aws $DRKUMO_BE_STACK/tun2vpc d5"
+alias d6="AWS_PROFILE=drkumo-d6-aws $DRKUMO_BE_STACK/tun2vpc d6"
+alias d6s="AWS_PROFILE=drkumo-d6-aws $DRKUMO_BE_STACK/tun2vpc stage"
+alias go3="AWS_PROFILE=drkumo-go3-aws $DRKUMO_BE_STACK/tun2vpc go3"
 
-retry() { until "$@"; do echo "Retrying..."; done }
+# Fortify
+export PATH="/Applications/Fortify/OpenText_Application_Security_Tools_25.2.0/bin:$PATH"
+export PATH="/Applications/Fortify/OpenText_SAST_Fortify_25.2.0/bin:$PATH"
+
+# Functions
+cpproj () {
+    local src="$1" dst="$2"
+    if [[ ! -d "$src" ]]; then
+        echo "Source $src is not a directory"
+        return 1
+    fi
+    mkdir -p "$dst"
+    COPYFILE_DISABLE=1 rsync -ah --info=progress2 \
+        --exclude='node_modules*' \
+        --exclude='**/node_modules*' \
+        --exclude='venv*' \
+        --exclude='**/venv*' \
+        --exclude='.venv*' \
+        --exclude='**/.venv*' \
+        "$@" \
+        "$src" "$dst"
+}
