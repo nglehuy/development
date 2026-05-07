@@ -148,6 +148,21 @@ cpproj () {
         --exclude='.venv*' \
         --exclude='**/.venv*' \
         --exclude='._*' \
+        --exclude='.DS_Store' \
         "$@" \
         "$src" "$dst"
+}
+
+git_reset_mode() {
+    if git rev-parse --git-dir > /dev/null 2>&1; then
+        echo "Resetting file modes in git repository..."
+        patch=$(git diff -p -R --no-color | grep -E "^(diff|(old|new) mode)")
+        if [ -n "$patch" ]; then
+            echo "$patch" | git apply
+        else
+            echo "no filemode changes to revert"
+        fi
+    else
+        echo "not a git repo"
+    fi
 }
