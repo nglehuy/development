@@ -42,3 +42,7 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 
 # Font
 brew install --cask font-maple-mono-nf
+
+# Netbird
+brew install netbirdio/tap/netbird
+brew install --cask netbirdio/tap/netbird-ui
