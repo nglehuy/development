@@ -48,5 +48,5 @@ brew install --cask font-maple-mono-nf
 brew install netbirdio/tap/netbird
 brew install --cask netbirdio/tap/netbird-ui
 
-# Raycast
-brew install --cask raycast
+# Mac Apps
+brew install --cask raycast doll xkey
