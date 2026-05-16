@@ -11,7 +11,7 @@ brew install \
     iproute2mac socat flock golang-migrate pnpm unixodbc swaks \
     font-recursive-mono-nerd-font \
     minikube graphviz istioctl \
-    mole
+    mole wireshark
 
 # [Terraform] CLI
 brew tap hashicorp/tap
@@ -49,4 +49,4 @@ brew install netbirdio/tap/netbird
 brew install --cask netbirdio/tap/netbird-ui
 
 # Mac Apps
-brew install --cask raycast doll xkey
+brew install --cask raycast doll xkey wireshark-app
