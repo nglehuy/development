@@ -45,8 +45,7 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 brew install --cask font-maple-mono-nf
 
 # Netbird
-brew install netbirdio/tap/netbird
-brew install --cask netbirdio/tap/netbird-ui
+curl -fsSL https://pkgs.netbird.io/install.sh | sh
 
 # Mac Apps
 brew install --cask raycast doll xkey wireshark-app
