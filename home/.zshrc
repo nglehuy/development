@@ -43,7 +43,7 @@ unsetopt PROMPT_SP
 
 # maven and java
 # export JAVA_HOME=/usr/lib/jvm/default
-export JAVA_HOME="$(/usr/libexec/java_home -v11)"
+export JAVA_HOME="$(/usr/libexec/java_home -v21)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
@@ -128,6 +128,9 @@ alias d6="AWS_PROFILE=drkumo-d6-aws $DRKUMO_BE_STACK/tun2vpc d6"
 alias d6s="AWS_PROFILE=drkumo-d6-aws $DRKUMO_BE_STACK/tun2vpc stage"
 alias go3="AWS_PROFILE=drkumo-go3-aws $DRKUMO_BE_STACK/tun2vpc go3"
 
+# Personal Agents
+alias pa="bash /Volumes/Kioxia/Persona/Projects/persona/pers-agents/install.sh"
+
 # Fortify
 export PATH="/Applications/Fortify/OpenText_Application_Security_Tools_25.2.0/bin:$PATH"
 export PATH="/Applications/Fortify/OpenText_SAST_Fortify_25.2.0/bin:$PATH"
@@ -166,3 +169,14 @@ git_reset_mode() {
         echo "not a git repo"
     fi
 }
+
+urlencode() {
+    echo "$1" | python3 -c "import sys; from urllib.parse import quote_plus; print(quote_plus(sys.stdin.read().strip()))"
+}
+
+# bun completions
+[ -s "/Users/nlhuycs/.bun/_bun" ] && source "/Users/nlhuycs/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
