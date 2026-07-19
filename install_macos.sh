@@ -53,3 +53,6 @@ brew install --cask raycast doll xkey wireshark-app
 
 # Codegraph
 curl -fsSL https://raw.githubusercontent.com/colbymchenry/codegraph/main/install.sh | sh
+
+# Mac Latex
+brew install --cask mactex
