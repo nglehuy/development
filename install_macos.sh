@@ -56,3 +56,4 @@ curl -fsSL https://raw.githubusercontent.com/colbymchenry/codegraph/main/install
 
 # Mac Latex
 brew install --cask mactex
+sudo cpan YAML::Tiny File::HomeDir Log::Log4perl Log::Dispatch
