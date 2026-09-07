@@ -1,8 +1,15 @@
 #!/usr/bin/env bash
 
+# Install Homebrew if not installed
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# https://github.com/tw93/mole
+# Install libs
 brew install \
-    ffmpeg libheif neofetch swig sox vim neovim git git-lfs python3 python@3.10 python@3.11 python@3.12 python@3.14 espeak \
-    rust go make cmake gcc jemalloc openssl curl wget fzf \
+    ffmpeg espeak libheif neofetch swig sox vim neovim git git-lfs \
+    python3 python@3.10 python@3.11 python@3.12 python@3.14 \
+    rust go make cmake gcc jemalloc openssl curl wget fzf perl \
+    jq yq \
     pybind11 abseil re2 libffi xmlsec1 \
     clang-format gradle maven openjdk openjdk@11 llvm libomp mecab automake grpc protobuf \
     bazelisk coreutils \
@@ -12,7 +19,8 @@ brew install \
     font-recursive-mono-nerd-font \
     minikube graphviz istioctl \
     rabbitmq \
-    mole wireshark # https://github.com/tw93/mole
+    mole \
+    wireshark
 
 # [Terraform] CLI
 brew tap hashicorp/tap
@@ -42,18 +50,23 @@ sudo ln -sfn $HOMEBREW_PREFIX/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/J
 # [Keyboard] disable press and hold to make keyboard repeat faster
 defaults write -g ApplePressAndHoldEnabled -bool false 
 
-# Font
+# Fonts
 brew install --cask font-maple-mono-nf
 
 # Netbird
 curl -fsSL https://pkgs.netbird.io/install.sh | sh
 
 # Mac Apps
-brew install --cask raycast doll xkey wireshark-app
+brew install --cask \
+    raycast \
+    doll \
+    xkey \
+    wireshark-app \
+    macs-fan-control
 
 # Codegraph
 curl -fsSL https://raw.githubusercontent.com/colbymchenry/codegraph/main/install.sh | sh
 
 # Mac Latex
 brew install --cask mactex
-sudo cpan YAML::Tiny File::HomeDir Log::Log4perl Log::Dispatch
+sudo cpanm --quiet YAML::Tiny File::HomeDir Log::Log4perl Log::Dispatch

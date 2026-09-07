@@ -180,3 +180,6 @@ urlencode() {
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# claude
+alias claude-pers="CLAUDE_CONFIG_DIR=~/.claude-pers claude"
