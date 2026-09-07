@@ -123,13 +123,10 @@ compinit
 
 # DrKumo
 export DRKUMO_BE_STACK="/Volumes/Kioxia/DrKumo/Projects/Others/drkumo-be-stack"
-alias d5="AWS_PROFILE=drkumo-d5-aws $DRKUMO_BE_STACK/tun2vpc d5"
-alias d6="AWS_PROFILE=drkumo-d6-aws $DRKUMO_BE_STACK/tun2vpc d6"
-alias d6s="AWS_PROFILE=drkumo-d6-aws $DRKUMO_BE_STACK/tun2vpc stage"
-alias go3="AWS_PROFILE=drkumo-go3-aws $DRKUMO_BE_STACK/tun2vpc go3"
-
-# Personal Agents
-alias pa="bash /Volumes/Kioxia/Persona/Projects/persona/pers-agents/install.sh"
+alias drk-d5="AWS_PROFILE=drkumo-d5-aws $DRKUMO_BE_STACK/tun2vpc d5"
+alias drk-d6="AWS_PROFILE=drkumo-d6-aws $DRKUMO_BE_STACK/tun2vpc d6"
+alias drk-d6s="AWS_PROFILE=drkumo-d6-aws $DRKUMO_BE_STACK/tun2vpc stage"
+alias drk-go3="AWS_PROFILE=drkumo-go3-aws $DRKUMO_BE_STACK/tun2vpc go3"
 
 # Fortify
 export PATH="/Applications/Fortify/OpenText_Application_Security_Tools_25.2.0/bin:$PATH"
@@ -173,13 +170,6 @@ git_reset_mode() {
 urlencode() {
     echo "$1" | python3 -c "import sys; from urllib.parse import quote_plus; print(quote_plus(sys.stdin.read().strip()))"
 }
-
-# bun completions
-[ -s "/Users/nlhuycs/.bun/_bun" ] && source "/Users/nlhuycs/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
 
 # claude
 alias claude-pers="CLAUDE_CONFIG_DIR=~/.claude-pers claude"
