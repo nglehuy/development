@@ -70,3 +70,7 @@ curl -fsSL https://raw.githubusercontent.com/colbymchenry/codegraph/main/install
 # Mac Latex
 brew install --cask mactex
 sudo cpanm --quiet YAML::Tiny File::HomeDir Log::Log4perl Log::Dispatch
+
+# Bun
+brew tap oven-sh/bun
+brew install oven-sh/bun/bun oven-sh/bun/bun@1.3.10
