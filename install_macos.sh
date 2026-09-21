@@ -61,7 +61,8 @@ brew install --cask \
     xkey \
     wireshark-app \
     macs-fan-control \
-    the-unarchiver
+    the-unarchiver \
+    Sanyam-G/switch/switch
 
 # Codegraph
 curl -fsSL https://raw.githubusercontent.com/colbymchenry/codegraph/main/install.sh | sh
