@@ -7,20 +7,21 @@
 # Install libs
 brew install \
     ffmpeg espeak libheif neofetch swig sox vim neovim git git-lfs \
-    python3 python@3.10 python@3.11 python@3.12 python@3.14 \
+    python3 python@3.10 python@3.11 python@3.12 python@3.14 uv \
     rust go make cmake gcc jemalloc openssl curl wget fzf perl \
     jq yq \
     pybind11 abseil re2 libffi xmlsec1 \
     clang-format gradle maven openjdk openjdk@11 llvm libomp mecab automake grpc protobuf \
     bazelisk coreutils \
-    openssh openvpn postgresql@17 postgresql@15 kubectl k9s helm telnet cfssl nmap trufflehog \
+    openssh openvpn postgresql@18 postgresql@17 postgresql@15 kubectl k9s helm telnet cfssl nmap trufflehog \
     tmux starship \
     iproute2mac socat flock golang-migrate pnpm unixodbc swaks \
     font-recursive-mono-nerd-font \
     minikube graphviz istioctl \
     rabbitmq \
+    opentofu \
     mole \
-    wireshark
+    wireshark cpanminus
 
 # [Terraform] CLI
 brew tap hashicorp/tap
@@ -37,9 +38,6 @@ brew tap mongodb/brew
 brew update
 brew install mongodb-database-tools
 
-# Unarchiver
-brew install --cask the-unarchiver
-
 # Miniconda
 brew install --cask miniconda
 
@@ -51,7 +49,7 @@ sudo ln -sfn $HOMEBREW_PREFIX/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/J
 defaults write -g ApplePressAndHoldEnabled -bool false 
 
 # Fonts
-brew install --cask font-maple-mono-nf
+brew install --cask font-maple-mono-nf font-meslo-for-powerlevel10k font-caskaydia-cove-nerd-font font-jetbrains-mono-nerd-font
 
 # Netbird
 curl -fsSL https://pkgs.netbird.io/install.sh | sh
@@ -62,7 +60,8 @@ brew install --cask \
     doll \
     xkey \
     wireshark-app \
-    macs-fan-control
+    macs-fan-control \
+    the-unarchiver
 
 # Codegraph
 curl -fsSL https://raw.githubusercontent.com/colbymchenry/codegraph/main/install.sh | sh
