@@ -11,7 +11,7 @@ brew install \
     rust go make cmake gcc jemalloc openssl curl wget fzf perl \
     jq yq ripgrep\
     pybind11 abseil re2 libffi xmlsec1 \
-    clang-format gradle maven openjdk openjdk@11 llvm libomp mecab automake grpc protobuf \
+    clang-format gradle maven openjdk openjdk@11 openjdk@21 llvm libomp mecab automake grpc protobuf \
     bazelisk coreutils \
     openssh openvpn postgresql@18 postgresql@17 postgresql@15 kubectl k9s helm telnet cfssl nmap trufflehog \
     tmux starship \
