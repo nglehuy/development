@@ -9,7 +9,7 @@ brew install \
     ffmpeg espeak libheif neofetch swig sox vim neovim git git-lfs \
     python3 python@3.10 python@3.11 python@3.12 python@3.14 uv \
     rust go make cmake gcc jemalloc openssl curl wget fzf perl \
-    jq yq ripgrep\
+    jq yq ripgrep gh \
     pybind11 abseil re2 libffi xmlsec1 \
     clang-format gradle maven openjdk openjdk@11 openjdk@21 llvm libomp mecab automake grpc protobuf \
     bazelisk coreutils \
