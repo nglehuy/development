@@ -121,13 +121,6 @@ autoload -Uz compinit
 compinit
 # End of Docker CLI completions
 
-# DrKumo
-export DRKUMO_BE_STACK="/Volumes/Kioxia/DrKumo/Projects/Others/drkumo-be-stack"
-alias drk-d5="AWS_PROFILE=drkumo-d5-aws $DRKUMO_BE_STACK/tun2vpc d5"
-alias drk-d6="AWS_PROFILE=drkumo-d6-aws $DRKUMO_BE_STACK/tun2vpc d6"
-alias drk-d6s="AWS_PROFILE=drkumo-d6-aws $DRKUMO_BE_STACK/tun2vpc stage"
-alias drk-go3="AWS_PROFILE=drkumo-go3-aws $DRKUMO_BE_STACK/tun2vpc go3"
-
 # Fortify
 export PATH="/Applications/Fortify/OpenText_Application_Security_Tools_25.2.0/bin:$PATH"
 export PATH="/Applications/Fortify/OpenText_SAST_Fortify_25.2.0/bin:$PATH"
@@ -173,3 +166,10 @@ urlencode() {
 
 # claude
 alias claude-pers="CLAUDE_CONFIG_DIR=~/.claude-pers claude"
+export CLAUDE_CODE_NO_FLICKER=1
+
+export DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib:$DYLD_FALLBACK_LIBRARY_PATH
+
+if [ -f ~/.zshrc_local ]; then
+    source ~/.zshrc_local
+fi
