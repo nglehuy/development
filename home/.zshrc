@@ -164,6 +164,35 @@ urlencode() {
     echo "$1" | python3 -c "import sys; from urllib.parse import quote_plus; print(quote_plus(sys.stdin.read().strip()))"
 }
 
+# Check out the default branch and pull it for each git repo directly inside a folder.
+# Usage: git_pull_all [folder]   (default: current folder)
+git_pull_all() {
+    local root="${1:-.}" dir branch
+    for dir in "$root"/*(N/); do
+        [[ -e "$dir/.git" ]] || continue
+        echo
+        echo "==> ${dir:t}"
+        if [[ -n "$(git -C "$dir" status --porcelain --untracked-files=no)" ]]; then
+            echo "skip: uncommitted changes"
+            continue
+        fi
+        branch=$(git -C "$dir" symbolic-ref --short refs/remotes/origin/HEAD 2>/dev/null)
+        if [[ -z "$branch" ]]; then
+            git -C "$dir" remote set-head origin --auto >/dev/null 2>&1
+            branch=$(git -C "$dir" symbolic-ref --short refs/remotes/origin/HEAD 2>/dev/null)
+        fi
+        if [[ -z "$branch" ]]; then
+            echo "skip: no default branch found on origin"
+            continue
+        fi
+        branch=${branch#origin/}
+        git -C "$dir" checkout "$branch" &&
+            git -C "$dir" branch -q --set-upstream-to="origin/$branch" &&
+            git -C "$dir" pull --ff-only
+        echo
+    done
+}
+
 # claude
 alias claude-pers="CLAUDE_CONFIG_DIR=~/.claude-pers claude"
 export CLAUDE_CODE_NO_FLICKER=1
@@ -173,3 +202,5 @@ export DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib:$DYLD_FALLBACK_LIBRARY_PATH
 if [ -f ~/.zshrc_local ]; then
     source ~/.zshrc_local
 fi
+
+export UV_NO_CACHE=1
