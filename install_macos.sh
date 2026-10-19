@@ -21,7 +21,7 @@ brew install \
     rabbitmq \
     opentofu \
     mole \
-    wireshark cpanminus
+    wireshark cpanminus tailscale
 
 # [Terraform] CLI
 brew tap hashicorp/tap
@@ -74,3 +74,6 @@ sudo cpanm --quiet YAML::Tiny File::HomeDir Log::Log4perl Log::Dispatch
 # Bun
 brew tap oven-sh/bun
 brew install oven-sh/bun/bun oven-sh/bun/bun@1.3.10
+
+# Tailscale
+brew install --cask tailscale-app

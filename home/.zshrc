@@ -11,10 +11,10 @@ setopt HIST_SAVE_NO_DUPS
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
-export PROMPT_COMMAND="echo"
-precmd() {
-    eval "$PROMPT_COMMAND"
-}
+# export PROMPT_COMMAND="echo"
+# precmd() {
+#     eval "$PROMPT_COMMAND"
+# }
 export ZSH="$HOME/.zsh/oh-my-zsh"
 
 plugins=(
@@ -195,7 +195,7 @@ git_pull_all() {
 
 # claude
 alias claude-pers="CLAUDE_CONFIG_DIR=~/.claude-pers claude"
-export CLAUDE_CODE_NO_FLICKER=1
+export CLAUDE_CODE_NO_FLICKER=0
 
 export DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib:$DYLD_FALLBACK_LIBRARY_PATH
 
