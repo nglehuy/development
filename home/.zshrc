@@ -193,6 +193,89 @@ git_pull_all() {
     done
 }
 
+# Close everything that uses a drive, then eject it.
+# Apps get a normal quit, shells get SIGHUP, other processes get SIGTERM.
+# Usage: ejd /Volumes/Name
+ejd() {
+    local vol="${1%/}" pid name ans i
+    local -a gui skip apps shells others targets left
+    if [[ "$OSTYPE" != darwin* ]]; then
+        echo "ejd works only on macOS. Skipped."
+        return 1
+    fi
+    if [[ "$vol" != /Volumes/?* ]] || ! mount | grep -qF " on $vol ("; then
+        echo "Usage: ejd /Volumes/Name (a mounted drive)"
+        return 1
+    fi
+    # Leave the drive so this shell does not hold it.
+    [[ "$PWD" == "$vol" || "$PWD" == "$vol"/* ]] && cd ~
+
+    gui=(${(s:, :)"$(osascript -e 'tell application "System Events" to get unix id of every process whose background only is false' 2>/dev/null)"})
+    if (( ! $#gui )); then
+        echo "Allow your terminal to control System Events in System Settings > Privacy & Security > Automation."
+        return 1
+    fi
+
+    # Never close this shell or the processes that run it.
+    pid=$$
+    while (( pid > 1 )); do
+        skip+=$pid
+        pid=${$(ps -o ppid= -p $pid)// /}
+    done
+
+    for pid in ${(fu)"$(lsof -t "$vol" 2>/dev/null)"}; do
+        name=$(ps -o comm= -p $pid) || continue
+        name=${${name##*/}#-}
+        if (( $skip[(Ie)$pid] )); then
+            echo "Skipped $pid ($name): it runs this terminal. Close it yourself."
+        elif [[ "$name" == Finder ]]; then
+            continue
+        elif (( $gui[(Ie)$pid] )); then
+            apps+=$pid
+        elif [[ "$name" == (zsh|bash|sh|fish|tcsh|ksh) ]]; then
+            shells+=$pid
+        else
+            others+=$pid
+        fi
+    done
+
+    targets=($apps $shells $others)
+    if (( $#targets )); then
+        (( $#apps )) && { echo "Apps (quit normally, so you can save first):"; ps -o pid=,comm= -p ${(j:,:)apps} }
+        (( $#shells )) && { echo "Shells (closed like a closed terminal tab):"; ps -o pid=,comm= -p ${(j:,:)shells} }
+        (( $#others )) && { echo "Other processes (asked to stop):"; ps -o pid=,comm= -p ${(j:,:)others} }
+        read "ans?Close all of them? [y/N] "
+        [[ "$ans" == [yY]* ]] || return 1
+
+        for pid in $apps; do
+            osascript -e "tell application \"System Events\" to set b to bundle identifier of first process whose unix id is $pid" \
+                -e 'tell application id b to quit' >/dev/null
+        done
+        (( $#shells )) && kill -HUP $shells 2>/dev/null
+        (( $#others )) && kill -TERM $others 2>/dev/null
+
+        # Wait up to 5 seconds for them to exit.
+        for i in {1..10}; do
+            left=()
+            for pid in $targets; do
+                kill -0 $pid 2>/dev/null && left+=$pid
+            done
+            (( $#left )) || break
+            sleep 0.5
+        done
+
+        if (( $#left )); then
+            echo "Still running:"
+            ps -o pid=,comm= -p ${(j:,:)left}
+            read "ans?Force kill them? Unsaved data in them will be lost. [y/N] "
+            [[ "$ans" == [yY]* ]] || return 1
+            kill -KILL $left 2>/dev/null
+            sleep 1
+        fi
+    fi
+    diskutil eject "$vol"
+}
+
 # claude
 alias claude-pers="CLAUDE_CONFIG_DIR=~/.claude-pers claude"
 export CLAUDE_CODE_NO_FLICKER=0
